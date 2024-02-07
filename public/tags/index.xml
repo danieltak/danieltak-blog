@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on danieltak</title>
+    <link>https://danieltak.com.br/tags/</link>
+    <description>Recent content in Tags on danieltak</description>
+    <image>
+      <title>danieltak</title>
+      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 06 Feb 2024 21:11:32 -0300</lastBuildDate>
+    <atom:link href="https://danieltak.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>alignment</title>
+      <link>https://danieltak.com.br/tags/alignment/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/alignment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alinhamento</title>
+      <link>https://danieltak.com.br/tags/alinhamento/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/alinhamento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://danieltak.com.br/tags/c&#43;&#43;/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Empacotamento</title>
+      <link>https://danieltak.com.br/tags/empacotamento/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/empacotamento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Estrutura</title>
+      <link>https://danieltak.com.br/tags/estrutura/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/estrutura/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>packing</title>
+      <link>https://danieltak.com.br/tags/packing/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/packing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>padding</title>
+      <link>https://danieltak.com.br/tags/padding/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/padding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Preenchimento</title>
+      <link>https://danieltak.com.br/tags/preenchimento/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/preenchimento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>struct</title>
+      <link>https://danieltak.com.br/tags/struct/</link>
+      <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/struct/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OlaMundo</title>
+      <link>https://danieltak.com.br/tags/olamundo/</link>
+      <pubDate>Mon, 05 Feb 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/olamundo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
