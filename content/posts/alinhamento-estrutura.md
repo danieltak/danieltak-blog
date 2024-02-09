@@ -3,7 +3,7 @@ title: "Alinhamento, Preenchimento e Empacotamento de Estruturas de Dados"
 date: '2024-02-06T21:11:32-03:00'
 # weight: 1
 # aliases: ["/first"]
-tags: ["C++","Alinhamento","Preenchimento","Empacotamento","Estrutura","alignment","padding","packing","struct"]
+tags: ["C++","Estrutura","struct"]
 categories: ["C++"]
 author: "danieltak"
 # author: ["Me", "You"] # multiple authors
@@ -31,7 +31,7 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/danieltak/danieltak-blog/blob/master/content/posts/alinhamento-estrutura.md"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
@@ -379,6 +379,8 @@ Portanto, cada caso deve ser analisado e não existem dogmas.
 Esse tipo de abordagem é muito utilizado por programador de C ou programadores muito experientes acostumados com o C++ 98.
 
 O recomendado é se manter no STL do C++ e usar as funções padrões fornecidas e testadas pelo mundo inteiro.
+
+Mas nos casos em que é necessário usar o pragma pack, opte por usar o `push` e o `pop`.
 
 ## Aprofundamento
 
