@@ -9,7 +9,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Análise Sintática"
+description: "Analisador Sintático"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -126,9 +126,254 @@ Use as funções fornecidas pela biblioteca, por exemplo:
 - xmlFreeTextWriter 
 - xmlBufferFree
 
-## xmlParser vs xmlReader
+## xmlParseFile vs xmlReadFile
 
+Embora o [tutorial oficial][6] sugira o uso da função `xmlParseFile()`, ela não é recomendada; em vez disso, use o `xmlReadFile`. É mais eficiente, [respostas no Stack Overflow](https://stackoverflow.com/questions/19315206/xmlparsefile-vs-xmlreadfile-libxml2) e [mailing list do GNOME](https://lists.gnome.org/archives/xml/2011-May/msg00006.html) também sugerem o uso da função.
 
+O [site oficial](https://gnome.pages.gitlab.gnome.org/libxml2/devhelp/libxml2-parser.html#xmlParseFile) possui a seguinte mensagem para a função `xmlParseFile`:
+
+> DEPRECATED: Use xmlReadFile. parse an XML file and build a tree. Automatic support for ZLIB/Compress compressed document is provided by default if found at compile-time.
+
+Numa tradução livre:
+
+> DESCONTINUADO: Use xmlReadFile para analisar um arquivo XML e criar uma árvore. O suporte automático para o documento compactado ZLIB/Compress é fornecido por padrão se for encontrado em tempo de compilação.
+
+Porém, ao invés de `xmlReadFile`, o novo [xmlReader][7] é melhor no quesito que não carrega para a memória todo o arquivo ou o [SAX2][8], porém são mais difíceis de implementar. Creio que em sistemas modernos é muito fácil criar um arquivo XML muito grande, pela grande quantidade de informação. Por mais que a memória RAM esteja maior, todos os outros recursos do computador também estão consumindo mais memória.
+
+## Conversão de xmlChar
+
+De acordo com a documentação do [xmlstring][9], um `xmlChar` é um typedef de `unsigned char`. A descrição a seguir pode ser vista:
+
+>This is a basic byte in an UTF-8 encoded string. It's unsigned allowing to pinpoint case where char * are assigned to xmlChar * (possibly making serialization back impossible).
+
+Numa tradução livre:
+
+>Esse é um byte básico em uma string codificada em UTF-8. Não tem sinal, o que permite identificar o caso em que char * é atribuído a xmlChar * (possivelmente impossibilitando a serialização de volta).
+
+O `xmlChar` é o tipo básico utilizado na biblioteca [libxml2][2] e as funções `xmlCharStrdup` ou `xmlCharStrndup` podem ser usadas para obter um `xmlChar *` de um `char *`.
+
+Há uma macro `BAD_CAST` definida:
+
+>Macro to cast a string to an xmlChar * when one know its safe.
+
+Numa tradução livre:
+
+>Macro para converter uma string em um xmlChar * quando se sabe que é seguro.
+
+Portanto, um literal de string pode ser usado para criar um [xmlChar][9] usando a macro `BAD_CAST`:
+
+```cpp
+const xmlChar* languageNode = BAD_CAST "language";
+```
+
+## Ler de um Arquivo
+
+Se o `xmlParseFile` já for usado no projeto, o obsoleto `xmlParseFile` poderá ser usado:
+
+```cpp
+std::string fileName = "path/to/file.xml";
+xmlDocPtr docPtr = nullptr;
+
+docPtr = xmlParseFile( filename.c_str() );
+
+if (docPtr == nullptr)
+	{
+    	fprintf( stderr, "Failed to parse %s\n", filename.c_str() );
+		return;
+    }
+xmlFreeDoc(docPtr);
+```
+
+Caso contrário, se o arquivo for pequeno, use o `xmlReadFile`:
+
+```cpp
+std::string fileName = "path/to/file.xml";
+xmlDocPtr docPtr = nullptr;
+
+docPtr = xmlReadFile(filename.c_str(), NULL, 0);
+
+if (docPtr == nullptr)
+	{
+    	fprintf( stderr, "Failed to parse %s\n", filename.c_str() );
+		return;
+    }
+xmlFreeDoc(docPtr);
+```
+
+## Ler da Memória
+
+O `xmlParseMemory` pode ser usado para ler a partir da memória para tamanhos de buffer pequenos, mas é obsoleto.
+
+>DEPRECATED: Use xmlReadMemory. parse an XML in-memory block and build a tree.
+
+Numa tradução livre:
+
+>DESCONTINUADO: Use xmlReadMemory. Analise um bloco XML na memória e crie uma árvore.
+
+```cpp
+const char *pMemory = "<?xml version='1.0'?>\n\
+<document xmlns:xi=\"http://www.w3.org/2003/XInclude\">\n\
+  <p>List of people:</p>\n\
+  <xi:include href=\"sql:select_name_from_people\"/>\n\
+</document>\n";
+
+xmlDocPtr docPtr = nullptr;
+
+docPtr = xmlParseMemory(pMemory, strlen(pMemory));
+
+if (docPtr == nullptr)
+	{
+    	fprintf( stderr, "Failed to parse %s\n", pMemory );
+		return;
+    }
+xmlFreeDoc(docPtr);
+```
+
+Use o `xmlReadMemory` em vez da função obsoleta:
+
+```cpp
+xmlDocPtr docPtr = nullptr;
+
+docPtr =  xmlReadMemory(pMemory, strlen(pMemory), "pMemory.xml", NULL, 0);
+
+if (docPtr == nullptr)
+	{
+    	fprintf( stderr, "Failed to parse %s\n", pMemory );
+		return;
+    }
+xmlFreeDoc(docPtr);
+```
+
+## Escrever para Arquivo
+
+O `xmlNewTextWriterFilename` pode ser usado para gravar no arquivo, algumas funções de gravação do `xmlwriter` usam o `xmlTextWriterPtr` como argumento para criar o conteúdo do xml.
+
+Depois de criar o conteúdo, encerre o documento e libere o objeto.
+
+```cpp
+int rc;
+std::string str("/path/to/filename.xml");
+xmlTextWriterPtr writer = xmlNewTextWriterFilename(str.c_str(), 0);
+
+rc = xmlTextWriterStartDocument(writer, "1.0", "UTF-8", NULL);
+if(rc < 0)
+{
+	std::cout << "An error occurred on xmlTextWriterStartDocument." << std::endl;
+}
+
+rc = xmlTextWriterStartElement(writer, BAD_CAST "document");
+rc = xmlTextWriterWriteAttribute(writer,
+									BAD_CAST "xmlns:xi",
+									BAD_CAST "http://www.w3.org/2003/XInclude" );
+
+rc = xmlTextWriterWriteFormatComment(writer,
+			"This is a comment" );
+
+rc = xmlTextWriterEndElement(writer);
+
+rc = xmlTextWriterWriteString(writer, BAD_CAST "List of people:");
+
+rc = xmlTextWriterEndDocument(writer);
+
+xmlFreeTextWriter(writer);
+```
+
+## Escrever para a Memória
+
+O `xmlNewTextWriterMemory` pode ser usado para gravar na memória do buffer, algumas funções de gravação do `xmlwriter` usam o `xmlTextWriterPtr` como argumento para criar o conteúdo do xml.
+
+Depois de criar o conteúdo, encerre o documento e libere os objetos (escritor e buffer).
+
+```cpp
+xmlBufferPtr buffer = xmlBufferCreate();
+xmlTextWriterPtr writer = xmlNewTextWriterMemory(buffer, 0);
+
+rc = xmlTextWriterStartDocument(writer, "1.0", "UTF-8", NULL);
+if(rc < 0)
+{
+	std::cout << "An error occurred on xmlTextWriterStartDocument." << std::endl;
+}
+
+rc = xmlTextWriterStartElement(writer, BAD_CAST "document");
+rc = xmlTextWriterWriteAttribute(writer,
+									BAD_CAST "xmlns:xi",
+									BAD_CAST "http://www.w3.org/2003/XInclude" );
+
+rc = xmlTextWriterWriteFormatComment(writer,
+			"This is a comment" );
+rc = xmlTextWriterEndElement(writer);
+
+rc = xmlTextWriterWriteString(writer, BAD_CAST "List of people:");
+
+rc = xmlTextWriterEndDocument(writer);
+
+std::string memory = reinterpret_cast<char*> buffer->content;
+std::cout << memory << std::endl;
+
+xmlFreeTextWriter(writer);
+xmlBufferFree(buffer);
+```
+
+## Ler SVG
+
+Quando você tem um `xmlNodePtr` de uma árvore xml, o exemplo a seguir usa `xmlNodePtr &pNode` como argumento da função e o seguinte xml:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<svg_content>
+<position>1</position>
+<svg xmlns="http://www.w3.org/2000/svg" id="1" viewBox="0 0 585 240" preserveAspectRatio="xMidYMid meet">
+<rect id="rect_1" x="0" y="0" width="585" height="20" stroke-width="1" stroke="#FFFFFF" fill="#000000"/>
+</svg>
+</svg_content>
+```
+
+O `xmlNodeDump` pode ser usado para extrair os dados svg a serem despejados em um renderizador svg:
+
+## Pegar o Atributo
+
+O `xmlNode` é a estrutura usada na árvore resultante da análise dos dados xml. O atributo dessa estrutura pode ser acessado a partir de `properties`.
+
+```cpp
+typedef struct _xmlNode xmlNode;
+typedef xmlNode *xmlNodePtr;
+struct _xmlNode {
+    void           *_private;	/* application data */
+    xmlElementType   type;	/* type number, must be second ! */
+    const xmlChar   *name;      /* the name of the node, or the entity */
+    struct _xmlNode *children;	/* parent->childs link */
+    struct _xmlNode *last;	/* last child link */
+    struct _xmlNode *parent;	/* child->parent link */
+    struct _xmlNode *next;	/* next sibling link  */
+    struct _xmlNode *prev;	/* previous sibling link  */
+    struct _xmlDoc  *doc;	/* the containing document */
+
+    /* End of common part */
+    xmlNs           *ns;        /* pointer to the associated namespace */
+    xmlChar         *content;   /* the content */
+    struct _xmlAttr *properties;/* properties list */
+    xmlNs           *nsDef;     /* namespace definitions on this node */
+    void            *psvi;	/* for type/PSVI information */
+    unsigned short   line;	/* line number */
+    unsigned short   extra;	/* extra data for XPath/XSLT */
+};
+```
+O seguinte código é um exemplo de como acessar os atributos:
+
+```cpp
+xmlAttrPtr attribute = svgValues->properties;
+xmlChar* content = (char*) xmlNodeListGetString(svgValues->doc, attribute->children, 0);
+```
+
+## Verificar se o arquivo mudou
+
+Geralmente os arquivos XML são usados como arquivos de configuração e exigem vários requisitos, que o usuário final não pode alterar o arquivo final manualmente, somente pelo software.
+
+**Como verificar se um arquivo foi alterado?**
+
+Intuitivamente, a data de modificação seria utilizada. Mas essa forma é propensa a erros e a verificação do hash deve ser utilizada.
+
+Conforme [esta resposta do SOen](https://stackoverflow.com/a/14697861/7690982), a data de modificação deve ser utilizada pelo desempenho, e se for diferente, realizar a verificação de hash.
 
 ## Referências
 
@@ -151,3 +396,19 @@ Use as funções fornecidas pela biblioteca, por exemplo:
 - [Difference among XML SAX parser, Pull parser & DOM Parser in android][5]
 
 [5]: https://stackoverflow.com/questions/11297273/difference-among-xml-sax-parser-pull-parser-dom-parser-in-android
+
+- [Tutorial][6]
+
+[6]: https://gnome.pages.gitlab.gnome.org/libxml2/tutorial/index.html
+
+- [xmlReader][7]
+
+[7]: https://gnome.pages.gitlab.gnome.org/libxml2/devhelp/libxml2-xmlreader.html
+
+- [SAX2][8]
+
+[8]: https://gnome.pages.gitlab.gnome.org/libxml2/devhelp/libxml2-SAX2.html
+
+- [xmlstring][9]
+
+[9]: https://gnome.pages.gitlab.gnome.org/libxml2/devhelp/libxml2-xmlstring.html#xmlChar
