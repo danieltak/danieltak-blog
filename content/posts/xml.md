@@ -263,8 +263,8 @@ if(rc < 0)
 
 rc = xmlTextWriterStartElement(writer, BAD_CAST "document");
 rc = xmlTextWriterWriteAttribute(writer,
-									BAD_CAST "xmlns:xi",
-									BAD_CAST "http://www.w3.org/2003/XInclude" );
+				BAD_CAST "xmlns:xi",
+				BAD_CAST "http://www.w3.org/2003/XInclude" );
 
 rc = xmlTextWriterWriteFormatComment(writer,
 			"This is a comment" );
@@ -296,8 +296,8 @@ if(rc < 0)
 
 rc = xmlTextWriterStartElement(writer, BAD_CAST "document");
 rc = xmlTextWriterWriteAttribute(writer,
-									BAD_CAST "xmlns:xi",
-									BAD_CAST "http://www.w3.org/2003/XInclude" );
+				BAD_CAST "xmlns:xi",
+				BAD_CAST "http://www.w3.org/2003/XInclude" );
 
 rc = xmlTextWriterWriteFormatComment(writer,
 			"This is a comment" );
@@ -374,6 +374,8 @@ Geralmente os arquivos XML são usados como arquivos de configuração e exigem 
 Intuitivamente, a data de modificação seria utilizada. Mas essa forma é propensa a erros e a verificação do hash deve ser utilizada.
 
 Conforme [esta resposta do SOen](https://stackoverflow.com/a/14697861/7690982), a data de modificação deve ser utilizada pelo desempenho, e se for diferente, realizar a verificação de hash.
+
+Porque a verificação de hash é computacionalmente pesado, então a verificação de data de modificação é um filtro para diminuir a lista de arquivos.
 
 ## Referências
 
