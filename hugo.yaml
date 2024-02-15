@@ -12,7 +12,7 @@ pygmentsUseClasses: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-mainsections: ["posts", "papermod"]
+mainsections: ["posts", "danieltak"]
 
 # googleAnalytics: UA-123-45
 
@@ -100,16 +100,21 @@ params:
     shouldSort: true
     location: 0
     distance: 1000
-    threshold: 0.4
+    threshold: 0.2
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
+    - identifier: procurar
+      name: Procurar
+      url: /procurar/
+      weight: 5
     - identifier: categorias
       name: Categorias
       url: /categorias/
-      weight: 10
+      weight: 20
     - identifier: tags
       name: Tags
       url: /tags/
@@ -132,3 +137,9 @@ markup:
 taxonomies:
   category: "categorias"
   tag: "tags"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
