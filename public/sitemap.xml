@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://danieltak.com.br/tags/alignment/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
+    <loc>https://danieltak.com.br/categories/c&#43;&#43;/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/alinhamento/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
+    <loc>https://danieltak.com.br/categories/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/tags/parser/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/posts/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/tags/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/tags/xml/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/posts/xml/</loc>
+    <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/posts/alinhamento-estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
@@ -14,37 +32,10 @@
     <loc>https://danieltak.com.br/tags/c&#43;&#43;/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categories/c&#43;&#43;/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/categories/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/tags/empacotamento/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
     <loc>https://danieltak.com.br/tags/estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/packing/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/tags/padding/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/posts/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/tags/preenchimento/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
     <loc>https://danieltak.com.br/tags/struct/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/tags/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/posts/ola-mundo/</loc>
