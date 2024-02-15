@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on danieltak</title>
-    <link>https://danieltak.com.br/categories/</link>
-    <description>Recent content in Categories on danieltak</description>
+    <title>Categorias on danieltak</title>
+    <link>https://danieltak.com.br/categorias/</link>
+    <description>Recent content in Categorias on danieltak</description>
     <image>
       <title>danieltak</title>
       <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,12 +12,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 07 Feb 2024 21:11:32 -0300</lastBuildDate>
-    <atom:link href="https://danieltak.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danieltak.com.br/categorias/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://danieltak.com.br/categories/c&#43;&#43;/</link>
+      <link>https://danieltak.com.br/categorias/c&#43;&#43;/</link>
       <pubDate>Wed, 07 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/categories/c&#43;&#43;/</guid>
+      <guid>https://danieltak.com.br/categorias/c&#43;&#43;/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,7 +2,7 @@
 title: "XML parser"
 date: '2024-02-07T21:11:32-03:00'
 tags: ["XML","parser"]
-categories: ["C++"]
+categorias: ["C++"]
 author: "danieltak"
 showToc: true
 TocOpen: false

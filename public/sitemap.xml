@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://danieltak.com.br/categories/c&#43;&#43;/</loc>
+    <loc>https://danieltak.com.br/categorias/c&#43;&#43;/</loc>
     <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categories/</loc>
+    <loc>https://danieltak.com.br/categorias/</loc>
     <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/</loc>
@@ -29,9 +29,6 @@
     <loc>https://danieltak.com.br/posts/alinhamento-estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/c&#43;&#43;/</loc>
-    <lastmod>2024-02-06T21:11:32-03:00</lastmod>
-  </url><url>
     <loc>https://danieltak.com.br/tags/estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
@@ -44,6 +41,6 @@
     <loc>https://danieltak.com.br/tags/olamundo/</loc>
     <lastmod>2024-02-05T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/archives/</loc>
+    <loc>https://danieltak.com.br/arquivos/</loc>
   </url>
 </urlset>

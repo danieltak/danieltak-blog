@@ -4,6 +4,7 @@ date: '2024-02-05T21:11:32-03:00'
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
+categorias: [""]
 author: "danieltak"
 # author: ["Me", "You"] # multiple authors
 showToc: true

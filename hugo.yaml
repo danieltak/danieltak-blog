@@ -89,8 +89,8 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
+    URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
+    Text: "Sugerir Alterações" # edit text
     appendFilePath: true # to append file path to Edit link
 
   # for search
@@ -106,14 +106,18 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: categorias
+      name: Categorias
+      url: /categorias/
       weight: 10
     - identifier: tags
       name: Tags
       url: /tags/
       weight: 20
+    - identifier: archives
+      name: Arquivos
+      url: /arquivos/
+      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
@@ -124,3 +128,7 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+taxonomies:
+  category: "categorias"
+  tag: "tags"
