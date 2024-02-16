@@ -64,6 +64,8 @@ Portanto, até onde sei, se você considerar apenas a velocidade com um arquivo 
 
 [Qual é a diferença entre DOM e SAX?][4]
 
+Se você já progamou utilizando o HTML, provavelmente já se deparou com o DOM, que é muito utilizado nas funções do Javascript para realizar o parsing e encontrar os elementos desejados.
+
 No SAX, os eventos são acionados quando o XML está sendo analisado. Quando o analisador está analisando o XML e encontra uma tag iniciando (por exemplo, `<algo>`), ele aciona o evento tagStarted (o nome real do evento pode ser diferente). Da mesma forma, quando o final da tag é encontrado durante a análise (`</algo>`), ele aciona o tagEnded. Usar um analisador SAX implica que você precisa lidar com esses eventos e dar sentido aos dados retornados com cada evento.
 
 No DOM, não há eventos acionados durante a análise. O XML inteiro é analisado e uma árvore DOM (dos nós no XML) é gerada e retornada. Depois de analisada, o usuário pode navegar na árvore para acessar os vários dados previamente incorporados nos vários nós do XML.
@@ -140,6 +142,67 @@ Numa tradução livre:
 
 Porém, ao invés de `xmlReadFile`, o novo [xmlReader][7] é melhor no quesito que não carrega para a memória todo o arquivo ou o [SAX2][8], porém são mais difíceis de implementar. Creio que em sistemas modernos é muito fácil criar um arquivo XML muito grande, pela grande quantidade de informação. Por mais que a memória RAM esteja maior, todos os outros recursos do computador também estão consumindo mais memória.
 
+O seguinte [exemplo do SOen](https://stackoverflow.com/a/3968399/7690982) é um bom ponto de partida:
+
+````cpp
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <libxml/tree.h>
+#include <libxml/parser.h>
+#include <libxml/parserInternals.h>
+
+
+void start_element_callback(void *user_data, const xmlChar *name, const xmlChar **attrs) {
+  printf("Beginning of element : %s \n", name);
+  while (NULL != attrs && NULL != attrs[0]) {
+    printf("attribute: %s=%s\n",attrs[0],attrs[1]);
+    attrs = &attrs[2];
+  }
+}
+
+int main() {
+  const char* xml_path = "hello_world.xml";
+  FILE *xml_fh = fopen(xml_path,"w+");
+  fputs("<hello foo=\"bar\" baz=\"baa\">world</hello>",xml_fh);
+  fclose(xml_fh);
+
+
+  // Initialize all fields to zero
+  xmlSAXHandler sh = { 0 };
+
+  // register callback
+  sh.startElement = start_element_callback;
+
+  xmlParserCtxtPtr ctxt;
+
+  // create the context
+  if ((ctxt = xmlCreateFileParserCtxt(xml_path)) == NULL) {
+    fprintf(stderr, "Erreur lors de la création du contexte\n");
+    return EXIT_FAILURE;
+  }
+  // register sax handler with the context
+  ctxt->sax = &sh;
+
+  // parse the doc
+  xmlParseDocument(ctxt);
+  // well-formed document?
+  if (ctxt->wellFormed) {
+    printf("XML Document is well formed\n");
+  } else {
+    fprintf(stderr, "XML Document isn't well formed\n");
+    //xmlFreeParserCtxt(ctxt);
+    return EXIT_FAILURE;
+  }
+
+  // free the memory
+  // xmlFreeParserCtxt(ctxt);
+
+
+  return EXIT_SUCCESS;
+}
+```
+
 ## Conversão de xmlChar
 
 De acordo com a documentação do [xmlstring][9], um `xmlChar` é um typedef de `unsigned char`. A descrição a seguir pode ser vista:
@@ -168,7 +231,7 @@ const xmlChar* languageNode = BAD_CAST "language";
 
 ## Ler de um Arquivo
 
-Se o `xmlParseFile` já for usado no projeto, o obsoleto `xmlParseFile` poderá ser usado:
+Se o `xmlParseFile` já for usado no projeto e o DOM é desejado, o obsoleto `xmlParseFile` poderá ser usado:
 
 ```cpp
 std::string fileName = "path/to/file.xml";
@@ -194,10 +257,40 @@ docPtr = xmlReadFile(filename.c_str(), NULL, 0);
 
 if (docPtr == nullptr)
 	{
-    	fprintf( stderr, "Failed to parse %s\n", filename.c_str() );
+    fprintf( stderr, "Failed to parse %s\n", filename.c_str() );
 		return;
-    }
+  }
 xmlFreeDoc(docPtr);
+```
+
+Ou para arquivos muitos grandes, verifique o exemplo do [xmlReader](https://gnome.pages.gitlab.gnome.org/libxml2/examples/reader1.c) ou do 
+
+### Ler os Nós
+
+Após ler o arquivo, uma árvore xml será obtida e os nós obtidos podem ser manipulados com o tipo `xmlNodePtr`.
+
+```cpp
+//Get all nodes
+xmlNodePtr pRootElement =  xmlDocGetRootElement(docPtr);
+```
+
+E um condicional `if()` pode ser adicionado para verificar se o nome do elemento é o correto, utilizando a função `xmlStrcmp` para comparar strings.
+
+```cpp
+if ( !(xmlStrcmp( pRootElement->name, BAD_CAST "application_content_update" ) ) )
+```
+
+E os nós filhos podem ser obitos:
+
+```cpp
+auto childrenNodes = pRootElement->children;
+```
+
+E o conteúdo de cada nó, seja do filho ou do pai:
+
+```cpp
+xmlChar * childContent = childrenNodes->content;
+xmlChar * rootContent = pRootElement->content;
 ```
 
 ## Ler da Memória
