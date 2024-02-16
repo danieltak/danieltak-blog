@@ -135,7 +135,9 @@ Se você quiser alterar o relógio do hardware e atualizar a hora do sistema, us
 
 ### Opinião
 
-Use sempre as opções que descrevem a intenção do argumento, por exemplo, utilizar o `hwclock --systohc`, pois você está realizando a operação do sys para o hc (hardware clock). Já com `hwclock -w`, o argumento `-w` pode significar uma infinidade de coisas. No Linux as opções das chamadas de sistema terá duas possibilidades em muitos casos, sempre opte pela semântica.
+Use sempre as opções que descrevem a intenção do argumento, por exemplo, utilizar o `hwclock --systohc`, pois você está realizando a operação do sys para o hc (hardware clock). Já com `hwclock -w`, o argumento `-w` pode significar uma infinidade de coisas.
+
+No Linux as opções das chamadas de sistema geralmente fornecem duas possibilidades, como no caso do [hwclock][9] de `-w` e `--systohc`, sempre opte pela semântica.
 
 ## Referência
 
@@ -170,3 +172,7 @@ Use sempre as opções que descrevem a intenção do argumento, por exemplo, uti
 - [gettimeofday][8]
 
 [8]: https://pubs.opengroup.org/onlinepubs/007908775/xsh/gettimeofday.html
+
+- [hwclock][9]
+
+[9]: https://man7.org/linux/man-pages/man8/hwclock.8.html
