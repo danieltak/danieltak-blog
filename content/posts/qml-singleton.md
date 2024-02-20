@@ -25,7 +25,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<images/singleton.png>" # image path/url
+    image: "</content/posts/images/qml-singleton/singleton.png>" # image path/url
     alt: "https://refactoring.guru/images/patterns/content/singleton/singleton.png" # alt text
     caption: "fonte: https://refactoring.guru/" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -70,10 +70,321 @@ Muitos tutoriais antigos dizem para alterar o qmldir, mas no Qt6, o qmldir é ge
 
 E no cabeçalho da classe `pragma Singleton`
 
+Um [Example Singleton1][2] pode ser visto no github, em que a classe QML `MySingleton` é criada com as seguintes propriedades:
+
+```cpp
+property string helloWorld:
+property string loremIpsum:
+property bool changeTextColor:
+```
+
+E o seguinte código é usado para um teste numa janela:
+
+```cpp
+import QtQuick
+import QtQuick.Controls
+
+Window {
+    width: 640
+    height: 480
+    visible: true
+    color: "#888888"
+    title: qsTr( MySingleton.helloWorld )
+
+    Text{
+        id: myText
+        width: parent.width
+
+        font.pixelSize: 22
+        color: MySingleton.changeTextColor ? "red" : "blue"
+        text: MySingleton.loremIpsum
+        wrapMode: Text.WrapAnywhere
+    }
+
+    Button{
+        id: myButton
+        anchors.top: myText.bottom
+
+        width: parent.width / 4
+        text: "Trocar Cor"
+
+        onClicked: {
+            MySingleton.changeTextColor = !MySingleton.changeTextColor;
+        }
+
+    }
+
+}
+```
+
+![Result Singleton1](/content/posts/images/qml-singleton/Singleton1.gif)
+
+## Classe C++
+
+Muitas vezes o QML é limitado e é necessário criar classes em C++.
+
+Para criar um singleton numa classe C++, vamos criar um header chamado `singleton.h`, com templates e thread-safe. Utilizando como base o projeto do [FluentUI][4].
+
+Para ser thread-safe, a classe [QMutexLocker][5] foi utilizada, mas um [lock_guard][6] também poderia ser utilizado.
+
+O exemplo completo pode ser visto no repositório [Example Singleton2][3].
+
+>Lembrando se for utilizar o [lock_guard][6], veja a [guideline CP44][7]
+
+### QMutexLocker
+
+O [QMutexLocker][5] deve ser criado em uma função na qual um QMutex precisa ser bloqueado. O mutex é bloqueado quando o [QMutexLocker][5] é criado. Você pode desbloquear e bloquear novamente o mutex com `unlock()` e `relock()`. Se estiver bloqueado, o mutex será desbloqueado quando o [QMutexLocker][5] for destruído.
+
+Por exemplo, a seguinte função bloqueia e desbloqueia um QMutex, tendo que garantir que um Deadlock não ocorra.
+
+```cpp
+int complexFunction(int flag)
+{
+    mutex.lock();
+
+    int retVal = 0;
+
+    switch (flag) {
+    case 0:
+    case 1:
+        retVal = moreComplexFunction(flag);
+        break;
+    case 2:
+        {
+            int status = anotherFunction();
+            if (status < 0) {
+                mutex.unlock();
+                return -2;
+            }
+            retVal = status + flag;
+        }
+        break;
+    default:
+        if (flag > 10) {
+            mutex.unlock();
+            return -1;
+        }
+        break;
+    }
+
+    mutex.unlock();
+    return retVal;
+}
+```
+
+O uso do QMutexLocker simplifica muito o código e o torna mais legível:
+
+```cpp
+int complexFunction(int flag)
+{
+    QMutexLocker locker(&mutex);
+
+    int retVal = 0;
+
+    switch (flag) {
+    case 0:
+    case 1:
+        return moreComplexFunction(flag);
+    case 2:
+        {
+            int status = anotherFunction();
+            if (status < 0)
+                return -2;
+            retVal = status + flag;
+        }
+        break;
+    default:
+        if (flag > 10)
+            return -1;
+        break;
+    }
+
+    return retVal;
+}
+```
+
+**Opinião:** Eu pessoalmente prefiro usar as funções do STL, como o [lock_guard][6]. Mas vou manter o uso do [QMutexLocker][5] para fins educacionais, pois há bastante material sobre o [lock_guard][6] na internet.
+
+### Estanciador Singleton
+
+A classe `singleton.h` pode ser criada com o `#define SINGLETON(Class)` para construir a classe com o template definido no header. 
+
+```cpp
+#ifndef SINGLETON_H
+#define SINGLETON_H
+
+#include <QMutex>
+
+template <typename T>
+class Singleton {
+public:
+    static T* getInstance();
+    
+private:
+    Q_DISABLE_COPY_MOVE(Singleton)
+};
+
+template <typename T>
+T* Singleton<T>::getInstance() {
+    static QMutex mutex;
+    QMutexLocker locker(&mutex);
+    static T* instance = nullptr;
+    if (instance == nullptr) {
+        instance = new T();
+    }
+    return instance;
+}
+
+#define SINGLETON(Class)                        \
+private:                                        \
+    friend class Singleton<Class>;              \
+    public:                                     \
+    static Class* getInstance() {               \
+        return Singleton<Class>::getInstance(); \
+}
+
+#define HIDE_CONSTRUCTOR(Class)         \
+private:                                \
+    Class() = default;                  \
+    Class(const Class& other) = delete; \
+    Q_DISABLE_COPY_MOVE(Class);
+
+#endif // SINGLETON_H
+```
+
+### Classe Singleton
+
+Criamos a classe `MySingleton`, adicionando as variáveis com a Macro Qt [Q_PROPERTY][8], `QML_NAMED_ELEMENT`, `QML_SINGLETON` e o instanciando o singleton com o `#define SINGLETON(Class)`.
+
+O header fica da seguinte maneira:
+
+```cpp
+#ifndef MYSINGLETON_H
+#define MYSINGLETON_H
+
+#include <QObject>
+#include <QString>
+#include <QtQml/qqml.h>
+#include "singleton.h"
+
+class MySingleton : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY( QString helloWorld READ helloWorld WRITE helloWorld NOTIFY helloWorldChanged )
+    Q_PROPERTY( QString loremIpsum READ loremIpsum WRITE loremIpsum NOTIFY loremIpsumChanged )
+    Q_PROPERTY( bool changeTextColor READ changeTextColor WRITE changeTextColor NOTIFY textColorChanged )
+    QML_NAMED_ELEMENT(MySingleton)
+    QML_SINGLETON
+
+protected:
+    QString helloWorld() const;
+    void helloWorld( QString newString );
+
+    QString loremIpsum() const;
+    void loremIpsum( QString newString );
+
+    bool changeTextColor() const;
+    void changeTextColor( bool newValue );
+private:
+    explicit MySingleton(QObject *parent = nullptr);
+public:
+    SINGLETON(MySingleton)
+    static MySingleton *create(QQmlEngine *qmlEngine, QJSEngine *jsEngine){return getInstance();}
+
+public:
+    QString m_helloWorld;
+    QString m_loremIpsum;
+    bool m_changeTextColor;
+
+signals:
+    void helloWorldChanged();
+    void loremIpsumChanged();
+    void textColorChanged();
+};
+
+#endif // MYSINGLETON_H
+```
+
+No cpp inicializamos os membros da classe no construtor e criamos as funções com overload de READ e WRITE da do [Q_PROPERTY][8], emitindo o sinal de "changed" que será notificado pelo sistema de eventos do Qt.
+
+```cpp
+#include "MySingleton.h"
+
+MySingleton::MySingleton(QObject *parent)
+    : QObject{parent},
+    m_helloWorld("Hello World!"),
+    m_loremIpsum("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis convallis sapien. In pharetra, urna quis ornare bibendum, neque lacus varius tortor, sed pretium nunc ante a metus. Fusce finibus semper urna, quis pharetra odio tincidunt feugiat. Quisque fermentum elementum velit auctor sagittis. Aenean ac aliquam diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod iaculis massa, sed pretium eros cursus a. Aenean eu tortor sed augue maximus pharetra. Aliquam erat volutpat. Pellentesque malesuada nibh quam, eu consequat elit pretium vel."),
+    m_changeTextColor(false)
+{
+}
+
+QString MySingleton::helloWorld() const
+{
+    return m_helloWorld;
+}
+
+void MySingleton::helloWorld(QString newString)
+{
+    m_helloWorld = newString;
+
+    emit helloWorldChanged();
+}
+
+QString MySingleton::loremIpsum() const
+{
+    return m_loremIpsum;
+}
+
+void MySingleton::loremIpsum(QString newString)
+{
+    m_loremIpsum = newString;
+
+    emit loremIpsumChanged();
+}
+
+bool MySingleton::changeTextColor() const
+{
+    return m_changeTextColor;
+}
+
+void MySingleton::changeTextColor(bool newValue)
+{
+    m_changeTextColor = newValue;
+
+    emit textColorChanged();
+}
+```
+
 ## Referência
 
 - [Singleton Design Pattern][1]
 
 [1]: https://refactoring.guru/pt-br/design-patterns/singleton
 
-- [time][2]
+- [Example Singleton1][2]
+
+[2]: https://github.com/danieltak/danieltak-blog/blob/master/exemplos/Singleton1
+
+- [Example Singleton2][3]
+
+[3]: https://github.com/danieltak/danieltak-blog/blob/master/exemplos/Singleton2
+
+- [FluentUI][4]
+
+[4]: https://github.com/zhuzichu520/FluentUI
+
+- [QMutexLocker][5]
+
+[5]: https://doc.qt.io/qt-6/qmutexlocker.html
+
+- [lock_guard][6]
+
+[6]: https://en.cppreference.com/w/cpp/thread/lock_guard
+
+- [CP.44: Remember to name your lock_guards and unique_locks][7]
+
+[7]: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rconc-name
+
+- [Q_PROPERTY][8]
+
+[8]: https://doc.qt.io/qt-6/properties.html
