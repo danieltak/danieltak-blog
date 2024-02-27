@@ -69,6 +69,8 @@ As distâncias do grande círculo diferem das distâncias geodésicas em até 0,
 
 Se estiver interessado na distância percorrida (de carro, barco ou avião), há muitas restrições no caminho percorrido e nem o grande círculo nem a distância geodésica, que medem o comprimento dos caminhos mais curtos em uma superfície ideal, seriam apropriados. Mas para estimativas de preço ou filtrar um mapa pelo raio do alvo, esses algoritmos se tornam interessantes.
 
+Para distâncias e trajetos mais precisos, a API de mapa será muito mais precisa e com informações mais relevantes. As mais famosas são Google Maps, Mapbox e OpenStreetMaps.
+
 ## Código em PHP
 
 Um exemplo de código de Haversine formula em PHP pode ser visto a seguir:
