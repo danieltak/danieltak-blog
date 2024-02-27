@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 16 Feb 2024 20:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2024 23:41:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distância</title>
+      <link>https://danieltak.com.br/tags/dist%C3%A2ncia/</link>
+      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/dist%C3%A2ncia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trigonometria</title>
+      <link>https://danieltak.com.br/tags/trigonometria/</link>
+      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/trigonometria/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DesignPattern</title>
       <link>https://danieltak.com.br/tags/designpattern/</link>

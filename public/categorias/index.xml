@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 16 Feb 2024 20:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2024 23:41:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/categorias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://danieltak.com.br/categorias/javascript/</link>
+      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>https://danieltak.com.br/categorias/php/</link>
+      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Snippet</title>
+      <link>https://danieltak.com.br/categorias/snippet/</link>
+      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/snippet/</guid>
+      <description></description>
+    </item>
     <item>
       <title>C&#43;&#43;</title>
       <link>https://danieltak.com.br/categorias/c&#43;&#43;/</link>
@@ -25,13 +46,6 @@
       <link>https://danieltak.com.br/categorias/qml/</link>
       <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/categorias/qml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Snippet</title>
-      <link>https://danieltak.com.br/categorias/snippet/</link>
-      <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/categorias/snippet/</guid>
       <description></description>
     </item>
     <item>
