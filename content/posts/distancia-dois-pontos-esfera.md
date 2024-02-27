@@ -4,7 +4,7 @@ date: '2024-02-26T23:41:32-03:00'
 # weight: 1
 # aliases: ["/first"]
 tags: ["Distância", "Trigonometria"]
-categorias: ["PHP", "Snippet", "Javascript"]
+categorias: ["PHP", "Snippet"]
 author: "danieltak"
 # author: ["Me", "You"] # multiple authors
 showToc: true

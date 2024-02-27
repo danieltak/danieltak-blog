@@ -14,13 +14,6 @@
     <lastBuildDate>Mon, 26 Feb 2024 23:41:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/categorias/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Javascript</title>
-      <link>https://danieltak.com.br/categorias/javascript/</link>
-      <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/categorias/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>PHP</title>
       <link>https://danieltak.com.br/categorias/php/</link>
       <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
