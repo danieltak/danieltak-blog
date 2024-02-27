@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 15 Feb 2024 21:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 16 Feb 2024 20:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/categorias/snippet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QML Singleton</title>
+      <link>https://danieltak.com.br/posts/qml-singleton/</link>
+      <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/qml-singleton/</guid>
+      <description>Instância única</description>
+    </item>
     <item>
       <title>Tempo no Linux</title>
       <link>https://danieltak.com.br/posts/linux-time/</link>

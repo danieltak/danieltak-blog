@@ -144,7 +144,7 @@ Porém, ao invés de `xmlReadFile`, o novo [xmlReader][7] é melhor no quesito q
 
 O seguinte [exemplo do SOen](https://stackoverflow.com/a/3968399/7690982) é um bom ponto de partida:
 
-````cpp
+```cpp
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

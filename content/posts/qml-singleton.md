@@ -25,11 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "</content/posts/images/qml-singleton/singleton.png>" # image path/url
+    image: images/qml-singleton/singleton.png
     alt: "https://refactoring.guru/images/patterns/content/singleton/singleton.png" # alt text
     caption: "fonte: https://refactoring.guru/" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: false # only hide on current single page
+    hiddenInSingle: false
+    responsiveImages: true
 editPost:
     URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
     Text: "Sugerir Alterações" # edit text
@@ -117,7 +119,7 @@ Window {
 }
 ```
 
-![Result Singleton1](/content/posts/images/qml-singleton/Singleton1.gif)
+![Result Singleton1](/posts/images/qml-singleton/Singleton1.gif)
 
 ## Classe C++
 
@@ -361,11 +363,11 @@ void MySingleton::changeTextColor(bool newValue)
 
 [1]: https://refactoring.guru/pt-br/design-patterns/singleton
 
-- [Example Singleton1][2]
+- [Exemplo Singleton1][2]
 
 [2]: https://github.com/danieltak/danieltak-blog/blob/master/exemplos/Singleton1
 
-- [Example Singleton2][3]
+- [Exemplo Singleton2][3]
 
 [3]: https://github.com/danieltak/danieltak-blog/blob/master/exemplos/Singleton2
 
