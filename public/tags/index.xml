@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 26 Feb 2024 23:41:32 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 27 Feb 2024 23:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GUI</title>
+      <link>https://danieltak.com.br/tags/gui/</link>
+      <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/gui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qt</title>
+      <link>https://danieltak.com.br/tags/qt/</link>
+      <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/qt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tabela</title>
+      <link>https://danieltak.com.br/tags/tabela/</link>
+      <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/tabela/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Distância</title>
       <link>https://danieltak.com.br/tags/dist%C3%A2ncia/</link>
@@ -53,20 +74,6 @@
       <link>https://danieltak.com.br/tags/tempo/</link>
       <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/tags/tempo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GUI</title>
-      <link>https://danieltak.com.br/tags/gui/</link>
-      <pubDate>Sun, 11 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/gui/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Qt</title>
-      <link>https://danieltak.com.br/tags/qt/</link>
-      <pubDate>Sun, 11 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/qt/</guid>
       <description></description>
     </item>
     <item>

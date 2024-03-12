@@ -432,7 +432,7 @@ MainWindow::~MainWindow()
 
 O resultado pode ser visto na figura abaixo, em que na esquerda a função do Word Wrap foi utilizada e na direita os `delegates`.
 
-Com os `delegates` o espaçamento da margem ficou mais personalizado e menor, pois a variável `rowspacing`
+Com os `delegates` o espaçamento da margem ficou mais personalizado e menor, pois a variável `rowspacing` é igual a zero.
 
 ![Resultado](/posts/images/table-widget-word-wrap/Resultado.PNG)
 
