@@ -3,7 +3,7 @@ title: "Enviar Sinal para Pthread ou Processo"
 date: '2024-03-10T21:11:32-03:00'
 # weight: 1
 # aliases: ["/first"]
-tags: ["Tempo", "Linux"]
+tags: ["Linux"]
 categorias: ["C++", "Linux", "Snippet"]
 author: "danieltak"
 # author: ["Me", "You"] # multiple authors
@@ -12,7 +12,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Como manipular o tempo com o header em C time.h no Linux"
+description: "Como enviar sinais para uma thread ou processo no POSIX"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
