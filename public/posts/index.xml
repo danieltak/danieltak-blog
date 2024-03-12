@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 27 Feb 2024 23:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 03 Mar 2024 20:30:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Um Estudo sobre o Tempo</title>
+      <link>https://danieltak.com.br/posts/estudo-tempo/</link>
+      <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/estudo-tempo/</guid>
+      <description>Tempo no C&#43;&#43; com a biblioteca STL std::chrono</description>
+    </item>
     <item>
       <title>Quebra de Texto num Widget de Table usando QWidget</title>
       <link>https://danieltak.com.br/posts/table-widget-word-wrap/</link>

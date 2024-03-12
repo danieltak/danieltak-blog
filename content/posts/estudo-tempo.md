@@ -25,7 +25,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: images/estudo/Time-Travel.png
+    image: images/estudo-tempo/timetravel.png
     alt: "Ajaj1818, CC BY-SA 4.0" # alt text
     caption: "fonte: https://commons.wikimedia.org/wiki/user:Ajaj1818" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -545,6 +545,68 @@ int main()
 }
 ```
 
+## <chrono> C++20
+
+No C++20 os seguintes relógios foram adicionados:
+
+- utc_clock
+- tai_clock
+- gps_clock
+- file_clock
+- local_t
+
+Os relógios `std::chrono::steady_clock` e `std::chrono::file_clock` têm uma epoch especificada na implementação. As epochs de `std::chrono::system_clock`, `std::chrono::gps_clock`, `std::chrono::tai_clock` e `std::chrono::utc_clock` começam às 00:00:00. `std::chrono::file_clock` é o relógio para entradas do sistema de arquivos.
+
+Além disso, o C++ 11 oferece suporte a `std::chrono::high_resolution_clock`.
+
+### clock_cast
+
+Com o [std::chrono::clock_cast][10], você pode converter pontos de tempo entre os relógios com uma epoch. Estes são os relógios `std::chrono::system_clock`, `std::chrono::utc_clock`, `std::chrono::gps_clock` e `std::chrono::tai_clock`. Além disso, `std::chrono::file_clock` suporta conversão.
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <chrono>
+
+
+int main() {
+
+  std::cout << '\n';
+
+  using namespace std::literals;
+
+  auto timePoint = std::chrono::system_clock::now();
+
+  auto timePointUTC = std::chrono::clock_cast<std::chrono::utc_clock>(timePoint);
+  std::cout << "UTC_time:  " << std::format("{:%F %X %Z}", timePointUTC) << '\n';
+
+  auto timePointSys = std::chrono::clock_cast<std::chrono::system_clock>(timePoint);
+  std::cout << "sys_time:  " << std::format("{:%F %X %Z}", timePointSys) << '\n';
+
+  auto timePointFile = std::chrono::clock_cast<std::chrono::file_clock>(timePoint);
+  std::cout << "file_time: " << std::format("{:%F %X %Z}", timePointFile) << '\n';
+
+  auto timePointGPS = std::chrono::clock_cast<std::chrono::gps_clock>(timePoint);
+  std::cout << "GPS_time:  " << std::format("{:%F %X %Z}", timePointGPS) << '\n';
+
+  auto timePointTAI = std::chrono::clock_cast<std::chrono::tai_clock>(timePoint);
+  std::cout << "TAI_time:  " << std::format("{:%F %X %Z}", timePointTAI) << '\n';
+
+  std::cout << '\n';
+
+}
+```
+
+### std::chrono::parse
+
+A função `std::chrono::parse` analisa o objeto chrono de um fluxo IO. Nas linhas a seguir, std::chrono::clock_cast converte o timePoint no relógio especificado. A linha a seguir exibe o ponto no tempo, especificando sua data (%F), sua representação de hora local (%X) e sua abreviação de fuso horário (%Z).
+
+```cpp
+std::istringstream{"2024-1-1 21:00:00"} >> std::chrono::parse("%F %T"s, timePoint);
+```
+
+Essa função ainda não foi implementada na maioria dos compiladores, e o gcc 14 ainda será lançado com o suporte a esta versão, o MSVC já possui suporte.
+
 ## Referência
 
 - [std::chrono][1]
@@ -582,3 +644,7 @@ int main()
 - [Relógios de Monotônicos][9]
 
 [9]: https://dev.to/zanfranceschi/conceito-relogios-monotonicos-1cni
+
+- [clock_cast][10]
+
+[10]: https://en.cppreference.com/w/cpp/chrono/clock_cast
