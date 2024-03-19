@@ -11,8 +11,36 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 03 Mar 2024 20:30:32 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2024 20:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://danieltak.com.br/tags/linux/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sistema Operacional</title>
+      <link>https://danieltak.com.br/tags/sistema-operacional/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/sistema-operacional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://danieltak.com.br/tags/windows/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redes</title>
+      <link>https://danieltak.com.br/tags/redes/</link>
+      <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/tags/redes/</guid>
+      <description></description>
+    </item>
     <item>
       <title>STL</title>
       <link>https://danieltak.com.br/tags/stl/</link>
@@ -74,13 +102,6 @@
       <link>https://danieltak.com.br/tags/singleton/</link>
       <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/tags/singleton/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://danieltak.com.br/tags/linux/</link>
-      <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/linux/</guid>
       <description></description>
     </item>
     <item>

@@ -52,7 +52,7 @@ No C++ 11 o `std::chrono::steady_clock` foi implementado e um TL;DR; será demon
 
 Para mais detalhes, nas próximas seções uma explicação mais detalhada será realizada.
 
-O [código a seguir] (https://stackoverflow.com/a/21995693/7690982) tem uma função de template `since()` usada para contar o tempo decorrido.
+O [código a seguir](https://stackoverflow.com/a/21995693/7690982) tem uma função de template `since()` usada para contar o tempo decorrido.
 
 Na seção de tempo do [Working Draft do Cpp][2], a explicação sobre a biblioteca `chrono` de C++ e a biblioteca `ctime` de C pode ser visualizada.
 

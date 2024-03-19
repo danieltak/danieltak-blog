@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 03 Mar 2024 20:30:32 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2024 20:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Escolha do Sistema Operacional</title>
+      <link>https://danieltak.com.br/posts/choices-sistema-operacional/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/choices-sistema-operacional/</guid>
+      <description>Alguns argumentos sobre cada sistema operacional e a razão de eu escolher este sistema.</description>
+    </item>
+    <item>
+      <title>Não use o ifconfig</title>
+      <link>https://danieltak.com.br/posts/nao-use-ifconfig/</link>
+      <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/nao-use-ifconfig/</guid>
+      <description>Use o comando do Linux `ip` ao invés do antigo `ifconfig`</description>
+    </item>
+    <item>
+      <title>Enviar Sinal para Pthread ou Processo</title>
+      <link>https://danieltak.com.br/posts/enviar-sinal-pthread/</link>
+      <pubDate>Sun, 10 Mar 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/enviar-sinal-pthread/</guid>
+      <description>Como enviar sinais para uma thread ou processo no POSIX</description>
+    </item>
     <item>
       <title>Um Estudo sobre o Tempo</title>
       <link>https://danieltak.com.br/posts/estudo-tempo/</link>

@@ -11,19 +11,40 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 03 Mar 2024 20:30:32 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2024 20:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/categorias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Choices</title>
+      <link>https://danieltak.com.br/categorias/choices/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/choices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opinião</title>
+      <link>https://danieltak.com.br/categorias/opini%C3%A3o/</link>
+      <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/opini%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://danieltak.com.br/categorias/linux/</link>
+      <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/categorias/linux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>C&#43;&#43;</title>
       <link>https://danieltak.com.br/categorias/c&#43;&#43;/</link>
-      <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
+      <pubDate>Sun, 10 Mar 2024 21:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/categorias/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Snippet</title>
       <link>https://danieltak.com.br/categorias/snippet/</link>
-      <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
+      <pubDate>Sun, 10 Mar 2024 21:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/categorias/snippet/</guid>
       <description></description>
     </item>
@@ -46,13 +67,6 @@
       <link>https://danieltak.com.br/categorias/qml/</link>
       <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
       <guid>https://danieltak.com.br/categorias/qml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://danieltak.com.br/categorias/linux/</link>
-      <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/categorias/linux/</guid>
       <description></description>
     </item>
   </channel>
