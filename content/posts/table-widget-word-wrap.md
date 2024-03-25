@@ -267,28 +267,32 @@ QSize MyTableDelegate::sizeHint(const QStyleOptionViewItem &option, const QModel
                 {
                     qStrSliced = currentText.sliced( iStartPos, iChar - iStartPos );
                     int iSlicedWidth = metrics.size( Qt::TextSingleLine, qStrSliced ).width();
+
                     if( iSlicedWidth >= width )
                     {
-                        int iLastSpacePos = iStartPos + qStrSliced.lastIndexOf( QChar::Space, -1 );
-                        if ( iLastSpacePos > -1 )
+                        int iLastSpacePos = iStartPos;
+                        if( true == qStrSliced.contains( QChar::Space ) )
                         {
-                            iStartPos = iLastSpacePos;
-                            iChar = iLastSpacePos;
+                            iLastSpacePos += qStrSliced.lastIndexOf( QChar::Space, -1 );
+                            if ( iLastSpacePos != iStartPos )
+                            {
+                                iChar = iLastSpacePos;
+                            }
+                        }
+                        else if( true == qStrSliced.contains( QChar::LineFeed ) )
+                        {
+                            iLastSpacePos += qStrSliced.lastIndexOf( QChar::LineFeed, -1 );
+                            if ( iLastSpacePos != iStartPos )
+                            {
+                                iChar = iLastSpacePos;
+                            }
                         }
                         else
                         {
-                            iStartPos = iChar;
+
                         }
-                        iLineCount++;
-                    }
-                    else if( true == qStrSliced.contains( QChar::LineFeed ) )
-                    {
-                        iLineCount++;
                         iStartPos = iChar;
-                    }
-                    else
-                    {
-                        //
+                        iLineCount++;
                     }
                 }
 
@@ -302,6 +306,9 @@ QSize MyTableDelegate::sizeHint(const QStyleOptionViewItem &option, const QModel
             height +=  rowSpacing;
         }
     }
+
+    width = std::max( 0, width );
+    height = std::max( 0, height );
 
     return QSize(width, height);
 }
