@@ -160,6 +160,16 @@ if( iStatus != 0 )
 }
 ```
 
+### Sinais
+
+Os [sinais][4] descritos no manual do POSIX podem ser usados para enviar sinais para a thread e uma ação será realizada, por exemplo, para matar uma thread ou processo o `SIGKILL` pode ser utilizado.
+
+```cpp
+pthread_kill( m_iThreadID, SIGKILL );
+```
+
+O valor de enum dos sinais podem variar para cada processador ou distribuição do Linux, no Ubuntu os signais podem ser vistos no [manual signal - lista de sinais disponíveis][5].
+
 ## Referência
 
 - [pthread_kill man7][1]
@@ -173,3 +183,11 @@ if( iStatus != 0 )
 - [kill][3]
 
 [3]: https://man7.org/linux/man-pages/man2/kill.2.html
+
+- [signal][4]
+
+[4]: https://man7.org/linux/man-pages/man7/signal.7.html
+
+- [signal Ubuntu][5]
+
+[5]: https://manpages.ubuntu.com/manpages/trusty/pt/man7/signal.7.html

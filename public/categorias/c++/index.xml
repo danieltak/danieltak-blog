@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 10 Mar 2024 21:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2024 21:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/categorias/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ponteiro Nulo - NULL e nullptr</title>
+      <link>https://danieltak.com.br/posts/ponteiro-nulo/</link>
+      <pubDate>Thu, 21 Mar 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/ponteiro-nulo/</guid>
+      <description>Valor de ponteiro nulo.</description>
+    </item>
     <item>
       <title>Enviar Sinal para Pthread ou Processo</title>
       <link>https://danieltak.com.br/posts/enviar-sinal-pthread/</link>

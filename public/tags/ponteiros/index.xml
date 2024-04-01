@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ponteiros on danieltak</title>
+    <link>https://danieltak.com.br/tags/ponteiros/</link>
+    <description>Recent content in Ponteiros on danieltak</description>
+    <image>
+      <title>danieltak</title>
+      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 21 Mar 2024 21:11:32 -0300</lastBuildDate>
+    <atom:link href="https://danieltak.com.br/tags/ponteiros/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ponteiro Nulo - NULL e nullptr</title>
+      <link>https://danieltak.com.br/posts/ponteiro-nulo/</link>
+      <pubDate>Thu, 21 Mar 2024 21:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/ponteiro-nulo/</guid>
+      <description>Valor de ponteiro nulo.</description>
+    </item>
+  </channel>
+</rss>
