@@ -143,7 +143,69 @@ Se a linha de código contendo a Macro `qFatal()` for descomentada, o código é
 
 ## Logger Genérico
 
+Com o logger do Qt é possível enviar o arquivo e linha de código em que o erro ocorreu e os dados de classificação de severidade com as macros `qInfo()`, `qDebug()`, `qWarning()`, `qCritical()` e `qFatal()`. Porém, muitas vezes precisamos de mais dados, num projeto complexo e grande, somente esses dados podem ser pouca informação ou algumas dependências podem não necessitar de Qt, pois a equipe que está desenvolvendo esta parte do backend não possui licenças ou com tantas mensagens, podemos querer agrupar ou categorizar por tipo de mensagem de erro ou biblioteca e formatar os dados num csv, para depois filtrar estas mensagens e facilitar a manipulação dos dados.
 
+Para um logger mais genérico ou que necessita de muitas personalizações, vamos utilizar somente o STL do C++ para gerar um log de erros multithread, para ser multithread podemos alcançar de duas maneiras, a primeira é a de criar uma instância única (singleton) de log e a segunda é de cada aplicação escrever utilizando locks. Creio que a primeira é a mais fácil e melhor de implementar, pois mitigam as chances de erros e diminui a complexidade.
+
+### __FILE__ e __LINE__
+
+Em C++, `__FILE__` é uma macro do pré-processador que se expande para o caminho completo do arquivo atual. Essa macro é útil em várias situações, principalmente em loggers.
+
+E `__LINE__` é uma macro do pré-processador que fornece o número da linha.
+
+Um arquivo chamado 'mainwindow.cpp' com o seguinte código retorna `C:/myApp/mainwindow.cpp 12`.
+
+```cpp
+#include "mainwindow.h"                         // 1
+#include "./ui_mainwindow.h"                    // 2
+                                                // 3
+#include <QDebug>                               // 4
+                                                // 5
+MainWindow::MainWindow(QWidget *parent)         // 6
+    : QMainWindow(parent)                       // 7
+    , ui(new Ui::MainWindow)                    // 8
+{                                               // 9
+    ui->setupUi(this);                          // 10
+                                                // 11
+    qInfo() << __FILE__ << __LINE__;            // 12
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+```
+
+Lembre-se de que __FILE__ é uma macro de string literal e não uma classe. Um erro comum é de inserir essas duas macros dentro da biblioteca de log, enquanto na verdade, você deseja o nome de arquivo e linha de código da aplicação que chamou a biblioteca de log.
+
+Por exemplo, você possui uma assinatura de função:
+
+```cpp
+void myLogFunc( QString qStr, const char* cFile = __FILE__ , const int iLine = __LINE__ );
+```
+
+Ao chamar esta função com:
+
+```cpp
+myLogFunc( "My Message" );
+```
+
+O retorno é o arquivo de header e linha que ela foi declarada e não a linha da função que chamou a função de log.
+
+Portanto, as macros sempre devem ser passadas explicitamente, conforme o exemplo a seguir:
+
+```cpp
+// Assinatura de função na biblioteca
+/// header file
+void myLogFunc( QString qStr, const char* cFile , const int iLine );
+```
+
+A chamada da função pela aplicação:
+```cpp
+myLogFunc( "My Message", __FILE__, __LINE__ );
+```
+
+ps.: Nos exemplos acima, a implementação da função `myLogFunc` não foi mostrada, somente um exemplo abstrato da declaração da função e da chamada dela.
 
 ## Referência
 
@@ -154,3 +216,4 @@ Se a linha de código contendo a Macro `qFatal()` for descomentada, o código é
 - [Exemplo Logger no Qt][2]
 
 [2]: https://github.com/danieltak/danieltak-blog/blob/master/exemplos/LoggingQt
+
