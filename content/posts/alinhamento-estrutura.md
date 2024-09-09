@@ -25,11 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
+    image: images/alinhamento-estrutura/Bits_and_Bytes.png # image path/url
+    alt: "Fcarmody, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons" # alt text
+    caption: "fonte: https://commons.wikimedia.org/wiki/File:Bits_and_Bytes.svg" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    hidden: false # only hide on current single page
+    hiddenInSingle: false
+    responsiveImages: true
 editPost:
     URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
     Text: "Sugerir Alterações" # edit text

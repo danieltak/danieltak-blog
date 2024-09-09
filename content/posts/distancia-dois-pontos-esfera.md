@@ -25,11 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
+    image: images/distancia-dois-pontos-esfera/havesine.png # image path/url
+    alt: " Jono Hey, Sketchplanations" # alt text
+    caption: "fonte: https://sketchplanations.com/the-haversine-formula" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    hidden: false # only hide on current single page
+    hiddenInSingle: false
+    responsiveImages: true
 editPost:
     URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
     Text: "Sugerir Alterações" # edit text

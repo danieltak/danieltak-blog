@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tempo on danieltak</title>
-    <link>https://danieltak.com.br/tags/tempo/</link>
+    <link>http://localhost:1313/tags/tempo/</link>
     <description>Recent content in Tempo on danieltak</description>
     <image>
       <title>danieltak</title>
-      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.133.0</generator>
     <language>pt-br</language>
     <lastBuildDate>Sun, 03 Mar 2024 20:30:32 -0300</lastBuildDate>
-    <atom:link href="https://danieltak.com.br/tags/tempo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tempo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Um Estudo sobre o Tempo</title>
-      <link>https://danieltak.com.br/posts/estudo-tempo/</link>
+      <link>http://localhost:1313/posts/estudo-tempo/</link>
       <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/estudo-tempo/</guid>
+      <guid>http://localhost:1313/posts/estudo-tempo/</guid>
       <description>Tempo no C&#43;&#43; com a biblioteca STL std::chrono</description>
     </item>
     <item>
       <title>Tempo no Linux</title>
-      <link>https://danieltak.com.br/posts/linux-time/</link>
+      <link>http://localhost:1313/posts/linux-time/</link>
       <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/linux-time/</guid>
+      <guid>http://localhost:1313/posts/linux-time/</guid>
       <description>Como manipular o tempo com o header em C time.h no Linux</description>
     </item>
   </channel>

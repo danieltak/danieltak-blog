@@ -25,11 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
+    image: images/operating-system/Operating-system.png # image path/url
+    alt: "Aguzer, CC0, via Wikimedia Commons" # alt text
+    caption: "fonte: https://commons.wikimedia.org/wiki/File:Operating-system.svg" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    hidden: false # only hide on current single page
+    hiddenInSingle: false
+    responsiveImages: true
 editPost:
     URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
     Text: "Sugerir Alterações" # edit text

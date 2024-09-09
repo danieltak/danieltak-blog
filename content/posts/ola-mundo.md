@@ -24,11 +24,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
+    image: images/ola-mundo/hello-world.jpg # image path/url
+    alt: "Foto de Porapak Apichodilok" # alt text
+    caption: "fonte: https://www.pexels.com/pt-br/foto/pessoa-segurando-o-globo-voltado-para-a-montanha-346885/" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    hidden: false # only hide on current single page
+    hiddenInSingle: false
+    responsiveImages: true
 editPost:
     URL: "https://github.com/danieltak/danieltak-blog/blob/master/content"
     Text: "Sugerir Alterações" # edit text
