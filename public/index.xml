@@ -2,106 +2,113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>danieltak</title>
-    <link>http://localhost:1313/</link>
+    <link>https://danieltak.com.br/</link>
     <description>Recent content on danieltak</description>
     <image>
       <title>danieltak</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 21 Mar 2024 21:11:32 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Sep 2024 20:11:32 -0300</lastBuildDate>
+    <atom:link href="https://danieltak.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logging</title>
+      <link>https://danieltak.com.br/posts/logging/</link>
+      <pubDate>Sun, 08 Sep 2024 20:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/logging/</guid>
+      <description>Logs de Erros</description>
+    </item>
     <item>
       <title>Ponteiro Nulo - NULL e nullptr</title>
-      <link>http://localhost:1313/posts/ponteiro-nulo/</link>
+      <link>https://danieltak.com.br/posts/ponteiro-nulo/</link>
       <pubDate>Thu, 21 Mar 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/ponteiro-nulo/</guid>
+      <guid>https://danieltak.com.br/posts/ponteiro-nulo/</guid>
       <description>Valor de ponteiro nulo.</description>
     </item>
     <item>
       <title>Escolha do Sistema Operacional</title>
-      <link>http://localhost:1313/posts/choices-sistema-operacional/</link>
+      <link>https://danieltak.com.br/posts/choices-sistema-operacional/</link>
       <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/choices-sistema-operacional/</guid>
+      <guid>https://danieltak.com.br/posts/choices-sistema-operacional/</guid>
       <description>Alguns argumentos sobre cada sistema operacional e a razão de eu escolher este sistema.</description>
     </item>
     <item>
       <title>Não use o ifconfig</title>
-      <link>http://localhost:1313/posts/nao-use-ifconfig/</link>
+      <link>https://danieltak.com.br/posts/nao-use-ifconfig/</link>
       <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/nao-use-ifconfig/</guid>
+      <guid>https://danieltak.com.br/posts/nao-use-ifconfig/</guid>
       <description>Use o comando do Linux `ip` ao invés do antigo `ifconfig`</description>
     </item>
     <item>
       <title>Enviar Sinal para Pthread ou Processo</title>
-      <link>http://localhost:1313/posts/enviar-sinal-pthread/</link>
+      <link>https://danieltak.com.br/posts/enviar-sinal-pthread/</link>
       <pubDate>Sun, 10 Mar 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/enviar-sinal-pthread/</guid>
+      <guid>https://danieltak.com.br/posts/enviar-sinal-pthread/</guid>
       <description>Como enviar sinais para uma thread ou processo no POSIX</description>
     </item>
     <item>
       <title>Um Estudo sobre o Tempo</title>
-      <link>http://localhost:1313/posts/estudo-tempo/</link>
+      <link>https://danieltak.com.br/posts/estudo-tempo/</link>
       <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/estudo-tempo/</guid>
+      <guid>https://danieltak.com.br/posts/estudo-tempo/</guid>
       <description>Tempo no C&#43;&#43; com a biblioteca STL std::chrono</description>
     </item>
     <item>
       <title>Quebra de Texto num Widget de Table usando QWidget</title>
-      <link>http://localhost:1313/posts/table-widget-word-wrap/</link>
+      <link>https://danieltak.com.br/posts/table-widget-word-wrap/</link>
       <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/table-widget-word-wrap/</guid>
+      <guid>https://danieltak.com.br/posts/table-widget-word-wrap/</guid>
       <description>Word Wrap no Table Widget do Qt</description>
     </item>
     <item>
       <title>Distância entre Dois Pontos de uma Esfera</title>
-      <link>http://localhost:1313/posts/distancia-dois-pontos-esfera/</link>
+      <link>https://danieltak.com.br/posts/distancia-dois-pontos-esfera/</link>
       <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/distancia-dois-pontos-esfera/</guid>
+      <guid>https://danieltak.com.br/posts/distancia-dois-pontos-esfera/</guid>
       <description>Distâncias entre dois pontos de uma esfera a partir de suas latitudes e longitudes.</description>
     </item>
     <item>
       <title>QML Singleton</title>
-      <link>http://localhost:1313/posts/qml-singleton/</link>
+      <link>https://danieltak.com.br/posts/qml-singleton/</link>
       <pubDate>Fri, 16 Feb 2024 20:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/qml-singleton/</guid>
+      <guid>https://danieltak.com.br/posts/qml-singleton/</guid>
       <description>Instância única</description>
     </item>
     <item>
       <title>Tempo no Linux</title>
-      <link>http://localhost:1313/posts/linux-time/</link>
+      <link>https://danieltak.com.br/posts/linux-time/</link>
       <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/linux-time/</guid>
+      <guid>https://danieltak.com.br/posts/linux-time/</guid>
       <description>Como manipular o tempo com o header em C time.h no Linux</description>
     </item>
     <item>
       <title>Maximizar e Minimizar Janelas Qt no X11</title>
-      <link>http://localhost:1313/posts/maximizar-minimizar-janela-x11-qt/</link>
+      <link>https://danieltak.com.br/posts/maximizar-minimizar-janela-x11-qt/</link>
       <pubDate>Sun, 11 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/maximizar-minimizar-janela-x11-qt/</guid>
+      <guid>https://danieltak.com.br/posts/maximizar-minimizar-janela-x11-qt/</guid>
       <description>XIconifyWindow() e XMapWindow()</description>
     </item>
     <item>
       <title>XML parser</title>
-      <link>http://localhost:1313/posts/xml/</link>
+      <link>https://danieltak.com.br/posts/xml/</link>
       <pubDate>Wed, 07 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/xml/</guid>
+      <guid>https://danieltak.com.br/posts/xml/</guid>
       <description>Analisador Sintático</description>
     </item>
     <item>
       <title>Alinhamento, Preenchimento e Empacotamento de Estruturas de Dados</title>
-      <link>http://localhost:1313/posts/alinhamento-estrutura/</link>
+      <link>https://danieltak.com.br/posts/alinhamento-estrutura/</link>
       <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/alinhamento-estrutura/</guid>
+      <guid>https://danieltak.com.br/posts/alinhamento-estrutura/</guid>
       <description>Alignment, padding and packing.</description>
     </item>
     <item>
       <title>Olá Mundo!</title>
-      <link>http://localhost:1313/posts/ola-mundo/</link>
+      <link>https://danieltak.com.br/posts/ola-mundo/</link>
       <pubDate>Mon, 05 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>http://localhost:1313/posts/ola-mundo/</guid>
+      <guid>https://danieltak.com.br/posts/ola-mundo/</guid>
       <description>Primeiro post do Blog.</description>
     </item>
   </channel>

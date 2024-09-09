@@ -1,6 +1,6 @@
 ---
 title: "Logging"
-date: '2024-02-16T20:11:32-03:00'
+date: '2024-09-08T20:11:32-03:00'
 # weight: 1
 # aliases: ["/first"]
 tags: ["Singleton", "DesignPattern"]
