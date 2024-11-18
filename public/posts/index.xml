@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 08 Sep 2024 20:11:32 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2024 23:11:32 -0300</lastBuildDate>
     <atom:link href="https://danieltak.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Receita Karê</title>
+      <link>https://danieltak.com.br/posts/kare/</link>
+      <pubDate>Mon, 30 Sep 2024 23:11:32 -0300</pubDate>
+      <guid>https://danieltak.com.br/posts/kare/</guid>
+      <description>Prato japonês de ensopado de carne com curry</description>
+    </item>
     <item>
       <title>Logging</title>
       <link>https://danieltak.com.br/posts/logging/</link>

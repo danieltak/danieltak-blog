@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://danieltak.com.br/categorias/c&#43;&#43;/</loc>
-    <lastmod>2024-09-08T20:11:32-03:00</lastmod>
-  </url><url>
     <loc>https://danieltak.com.br/categorias/</loc>
-    <lastmod>2024-09-08T20:11:32-03:00</lastmod>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/tags/culin%C3%A1ria/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/categorias/culin%C3%A1ria/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/posts/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/posts/kare/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/tags/</loc>
+    <lastmod>2024-09-30T23:11:32-03:00</lastmod>
+  </url><url>
+    <loc>https://danieltak.com.br/categorias/c&#43;&#43;/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/tags/designpattern/</loc>
@@ -20,16 +35,10 @@
     <loc>https://danieltak.com.br/posts/logging/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/</loc>
-    <lastmod>2024-09-08T20:11:32-03:00</lastmod>
-  </url><url>
     <loc>https://danieltak.com.br/categorias/qt/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/tags/singleton/</loc>
-    <lastmod>2024-09-08T20:11:32-03:00</lastmod>
-  </url><url>
-    <loc>https://danieltak.com.br/tags/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
     <loc>https://danieltak.com.br/categorias/windows/</loc>
