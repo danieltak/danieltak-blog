@@ -2,161 +2,161 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://danieltak.com.br/categorias/</loc>
+    <loc>http://localhost:1313/categorias/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/culin%C3%A1ria/</loc>
+    <loc>http://localhost:1313/tags/culin%C3%A1ria/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/culin%C3%A1ria/</loc>
+    <loc>http://localhost:1313/categorias/culin%C3%A1ria/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/kare/</loc>
+    <loc>http://localhost:1313/posts/kare/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-09-30T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/c&#43;&#43;/</loc>
+    <loc>http://localhost:1313/categorias/c&#43;&#43;/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/designpattern/</loc>
+    <loc>http://localhost:1313/tags/designpattern/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/linux/</loc>
+    <loc>http://localhost:1313/categorias/linux/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/logging/</loc>
+    <loc>http://localhost:1313/posts/logging/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/qt/</loc>
+    <loc>http://localhost:1313/categorias/qt/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/singleton/</loc>
+    <loc>http://localhost:1313/tags/singleton/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/windows/</loc>
+    <loc>http://localhost:1313/categorias/windows/</loc>
     <lastmod>2024-09-08T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/null/</loc>
+    <loc>http://localhost:1313/tags/null/</loc>
     <lastmod>2024-03-21T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/ponteiro-nulo/</loc>
+    <loc>http://localhost:1313/posts/ponteiro-nulo/</loc>
     <lastmod>2024-03-21T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/ponteiros/</loc>
+    <loc>http://localhost:1313/tags/ponteiros/</loc>
     <lastmod>2024-03-21T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/choices/</loc>
+    <loc>http://localhost:1313/categorias/choices/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/choices-sistema-operacional/</loc>
+    <loc>http://localhost:1313/posts/choices-sistema-operacional/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/linux/</loc>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/opini%C3%A3o/</loc>
+    <loc>http://localhost:1313/categorias/opini%C3%A3o/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/sistema-operacional/</loc>
+    <loc>http://localhost:1313/tags/sistema-operacional/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/windows/</loc>
+    <loc>http://localhost:1313/tags/windows/</loc>
     <lastmod>2024-03-15T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/nao-use-ifconfig/</loc>
+    <loc>http://localhost:1313/posts/nao-use-ifconfig/</loc>
     <lastmod>2024-03-12T19:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/redes/</loc>
+    <loc>http://localhost:1313/tags/redes/</loc>
     <lastmod>2024-03-12T19:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/enviar-sinal-pthread/</loc>
+    <loc>http://localhost:1313/posts/enviar-sinal-pthread/</loc>
     <lastmod>2024-03-10T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/snippet/</loc>
+    <loc>http://localhost:1313/categorias/snippet/</loc>
     <lastmod>2024-03-10T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/stl/</loc>
+    <loc>http://localhost:1313/tags/stl/</loc>
     <lastmod>2024-03-03T20:30:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/tempo/</loc>
+    <loc>http://localhost:1313/tags/tempo/</loc>
     <lastmod>2024-03-03T20:30:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/estudo-tempo/</loc>
+    <loc>http://localhost:1313/posts/estudo-tempo/</loc>
     <lastmod>2024-03-03T20:30:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/gui/</loc>
+    <loc>http://localhost:1313/tags/gui/</loc>
     <lastmod>2024-02-27T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/qt/</loc>
+    <loc>http://localhost:1313/tags/qt/</loc>
     <lastmod>2024-02-27T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/table-widget-word-wrap/</loc>
+    <loc>http://localhost:1313/posts/table-widget-word-wrap/</loc>
     <lastmod>2024-02-27T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/tabela/</loc>
+    <loc>http://localhost:1313/tags/tabela/</loc>
     <lastmod>2024-02-27T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/dist%C3%A2ncia/</loc>
+    <loc>http://localhost:1313/tags/dist%C3%A2ncia/</loc>
     <lastmod>2024-02-26T23:41:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/distancia-dois-pontos-esfera/</loc>
+    <loc>http://localhost:1313/posts/distancia-dois-pontos-esfera/</loc>
     <lastmod>2024-02-26T23:41:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/php/</loc>
+    <loc>http://localhost:1313/categorias/php/</loc>
     <lastmod>2024-02-26T23:41:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/trigonometria/</loc>
+    <loc>http://localhost:1313/tags/trigonometria/</loc>
     <lastmod>2024-02-26T23:41:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/categorias/qml/</loc>
+    <loc>http://localhost:1313/categorias/qml/</loc>
     <lastmod>2024-02-16T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/qml-singleton/</loc>
+    <loc>http://localhost:1313/posts/qml-singleton/</loc>
     <lastmod>2024-02-16T20:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/linux-time/</loc>
+    <loc>http://localhost:1313/posts/linux-time/</loc>
     <lastmod>2024-02-15T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/maximizar-minimizar-janela-x11-qt/</loc>
+    <loc>http://localhost:1313/posts/maximizar-minimizar-janela-x11-qt/</loc>
     <lastmod>2024-02-11T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/x11/</loc>
+    <loc>http://localhost:1313/tags/x11/</loc>
     <lastmod>2024-02-11T23:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/parser/</loc>
+    <loc>http://localhost:1313/tags/parser/</loc>
     <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/xml/</loc>
+    <loc>http://localhost:1313/tags/xml/</loc>
     <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/xml/</loc>
+    <loc>http://localhost:1313/posts/xml/</loc>
     <lastmod>2024-02-07T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/alinhamento-estrutura/</loc>
+    <loc>http://localhost:1313/posts/alinhamento-estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/estrutura/</loc>
+    <loc>http://localhost:1313/tags/estrutura/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/struct/</loc>
+    <loc>http://localhost:1313/tags/struct/</loc>
     <lastmod>2024-02-06T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/posts/ola-mundo/</loc>
+    <loc>http://localhost:1313/posts/ola-mundo/</loc>
     <lastmod>2024-02-05T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/tags/olamundo/</loc>
+    <loc>http://localhost:1313/tags/olamundo/</loc>
     <lastmod>2024-02-05T21:11:32-03:00</lastmod>
   </url><url>
-    <loc>https://danieltak.com.br/arquivos/</loc>
+    <loc>http://localhost:1313/arquivos/</loc>
   </url><url>
-    <loc>https://danieltak.com.br/procurar/</loc>
+    <loc>http://localhost:1313/procurar/</loc>
   </url>
 </urlset>

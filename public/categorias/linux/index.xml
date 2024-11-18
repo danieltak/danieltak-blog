@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on danieltak</title>
-    <link>https://danieltak.com.br/categorias/linux/</link>
+    <link>http://localhost:1313/categorias/linux/</link>
     <description>Recent content in Linux on danieltak</description>
     <image>
       <title>danieltak</title>
-      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>pt-br</language>
     <lastBuildDate>Sun, 08 Sep 2024 20:11:32 -0300</lastBuildDate>
-    <atom:link href="https://danieltak.com.br/categorias/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categorias/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logging</title>
-      <link>https://danieltak.com.br/posts/logging/</link>
+      <link>http://localhost:1313/posts/logging/</link>
       <pubDate>Sun, 08 Sep 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/logging/</guid>
+      <guid>http://localhost:1313/posts/logging/</guid>
       <description>Logs de Erros</description>
     </item>
     <item>
       <title>Não use o ifconfig</title>
-      <link>https://danieltak.com.br/posts/nao-use-ifconfig/</link>
+      <link>http://localhost:1313/posts/nao-use-ifconfig/</link>
       <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/nao-use-ifconfig/</guid>
+      <guid>http://localhost:1313/posts/nao-use-ifconfig/</guid>
       <description>Use o comando do Linux `ip` ao invés do antigo `ifconfig`</description>
     </item>
     <item>
       <title>Enviar Sinal para Pthread ou Processo</title>
-      <link>https://danieltak.com.br/posts/enviar-sinal-pthread/</link>
+      <link>http://localhost:1313/posts/enviar-sinal-pthread/</link>
       <pubDate>Sun, 10 Mar 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/enviar-sinal-pthread/</guid>
+      <guid>http://localhost:1313/posts/enviar-sinal-pthread/</guid>
       <description>Como enviar sinais para uma thread ou processo no POSIX</description>
     </item>
     <item>
       <title>Tempo no Linux</title>
-      <link>https://danieltak.com.br/posts/linux-time/</link>
+      <link>http://localhost:1313/posts/linux-time/</link>
       <pubDate>Thu, 15 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/linux-time/</guid>
+      <guid>http://localhost:1313/posts/linux-time/</guid>
       <description>Como manipular o tempo com o header em C time.h no Linux</description>
     </item>
     <item>
       <title>Maximizar e Minimizar Janelas Qt no X11</title>
-      <link>https://danieltak.com.br/posts/maximizar-minimizar-janela-x11-qt/</link>
+      <link>http://localhost:1313/posts/maximizar-minimizar-janela-x11-qt/</link>
       <pubDate>Sun, 11 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/posts/maximizar-minimizar-janela-x11-qt/</guid>
+      <guid>http://localhost:1313/posts/maximizar-minimizar-janela-x11-qt/</guid>
       <description>XIconifyWindow() e XMapWindow()</description>
     </item>
   </channel>

@@ -2,169 +2,169 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on danieltak</title>
-    <link>https://danieltak.com.br/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on danieltak</description>
     <image>
       <title>danieltak</title>
-      <url>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://danieltak.com.br/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.133.0</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 30 Sep 2024 23:11:32 -0300</lastBuildDate>
-    <atom:link href="https://danieltak.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Culinária</title>
-      <link>https://danieltak.com.br/tags/culin%C3%A1ria/</link>
+      <link>http://localhost:1313/tags/culin%C3%A1ria/</link>
       <pubDate>Mon, 30 Sep 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/culin%C3%A1ria/</guid>
+      <guid>http://localhost:1313/tags/culin%C3%A1ria/</guid>
       <description></description>
     </item>
     <item>
       <title>DesignPattern</title>
-      <link>https://danieltak.com.br/tags/designpattern/</link>
+      <link>http://localhost:1313/tags/designpattern/</link>
       <pubDate>Sun, 08 Sep 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/designpattern/</guid>
+      <guid>http://localhost:1313/tags/designpattern/</guid>
       <description></description>
     </item>
     <item>
       <title>Singleton</title>
-      <link>https://danieltak.com.br/tags/singleton/</link>
+      <link>http://localhost:1313/tags/singleton/</link>
       <pubDate>Sun, 08 Sep 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/singleton/</guid>
+      <guid>http://localhost:1313/tags/singleton/</guid>
       <description></description>
     </item>
     <item>
       <title>Null</title>
-      <link>https://danieltak.com.br/tags/null/</link>
+      <link>http://localhost:1313/tags/null/</link>
       <pubDate>Thu, 21 Mar 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/null/</guid>
+      <guid>http://localhost:1313/tags/null/</guid>
       <description></description>
     </item>
     <item>
       <title>Ponteiros</title>
-      <link>https://danieltak.com.br/tags/ponteiros/</link>
+      <link>http://localhost:1313/tags/ponteiros/</link>
       <pubDate>Thu, 21 Mar 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/ponteiros/</guid>
+      <guid>http://localhost:1313/tags/ponteiros/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://danieltak.com.br/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Sistema Operacional</title>
-      <link>https://danieltak.com.br/tags/sistema-operacional/</link>
+      <link>http://localhost:1313/tags/sistema-operacional/</link>
       <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/sistema-operacional/</guid>
+      <guid>http://localhost:1313/tags/sistema-operacional/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://danieltak.com.br/tags/windows/</link>
+      <link>http://localhost:1313/tags/windows/</link>
       <pubDate>Fri, 15 Mar 2024 20:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/windows/</guid>
+      <guid>http://localhost:1313/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Redes</title>
-      <link>https://danieltak.com.br/tags/redes/</link>
+      <link>http://localhost:1313/tags/redes/</link>
       <pubDate>Tue, 12 Mar 2024 19:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/redes/</guid>
+      <guid>http://localhost:1313/tags/redes/</guid>
       <description></description>
     </item>
     <item>
       <title>STL</title>
-      <link>https://danieltak.com.br/tags/stl/</link>
+      <link>http://localhost:1313/tags/stl/</link>
       <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/stl/</guid>
+      <guid>http://localhost:1313/tags/stl/</guid>
       <description></description>
     </item>
     <item>
       <title>Tempo</title>
-      <link>https://danieltak.com.br/tags/tempo/</link>
+      <link>http://localhost:1313/tags/tempo/</link>
       <pubDate>Sun, 03 Mar 2024 20:30:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/tempo/</guid>
+      <guid>http://localhost:1313/tags/tempo/</guid>
       <description></description>
     </item>
     <item>
       <title>GUI</title>
-      <link>https://danieltak.com.br/tags/gui/</link>
+      <link>http://localhost:1313/tags/gui/</link>
       <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/gui/</guid>
+      <guid>http://localhost:1313/tags/gui/</guid>
       <description></description>
     </item>
     <item>
       <title>Qt</title>
-      <link>https://danieltak.com.br/tags/qt/</link>
+      <link>http://localhost:1313/tags/qt/</link>
       <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/qt/</guid>
+      <guid>http://localhost:1313/tags/qt/</guid>
       <description></description>
     </item>
     <item>
       <title>Tabela</title>
-      <link>https://danieltak.com.br/tags/tabela/</link>
+      <link>http://localhost:1313/tags/tabela/</link>
       <pubDate>Tue, 27 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/tabela/</guid>
+      <guid>http://localhost:1313/tags/tabela/</guid>
       <description></description>
     </item>
     <item>
       <title>Distância</title>
-      <link>https://danieltak.com.br/tags/dist%C3%A2ncia/</link>
+      <link>http://localhost:1313/tags/dist%C3%A2ncia/</link>
       <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/dist%C3%A2ncia/</guid>
+      <guid>http://localhost:1313/tags/dist%C3%A2ncia/</guid>
       <description></description>
     </item>
     <item>
       <title>Trigonometria</title>
-      <link>https://danieltak.com.br/tags/trigonometria/</link>
+      <link>http://localhost:1313/tags/trigonometria/</link>
       <pubDate>Mon, 26 Feb 2024 23:41:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/trigonometria/</guid>
+      <guid>http://localhost:1313/tags/trigonometria/</guid>
       <description></description>
     </item>
     <item>
       <title>X11</title>
-      <link>https://danieltak.com.br/tags/x11/</link>
+      <link>http://localhost:1313/tags/x11/</link>
       <pubDate>Sun, 11 Feb 2024 23:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/x11/</guid>
+      <guid>http://localhost:1313/tags/x11/</guid>
       <description></description>
     </item>
     <item>
       <title>Parser</title>
-      <link>https://danieltak.com.br/tags/parser/</link>
+      <link>http://localhost:1313/tags/parser/</link>
       <pubDate>Wed, 07 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/parser/</guid>
+      <guid>http://localhost:1313/tags/parser/</guid>
       <description></description>
     </item>
     <item>
       <title>XML</title>
-      <link>https://danieltak.com.br/tags/xml/</link>
+      <link>http://localhost:1313/tags/xml/</link>
       <pubDate>Wed, 07 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/xml/</guid>
+      <guid>http://localhost:1313/tags/xml/</guid>
       <description></description>
     </item>
     <item>
       <title>Estrutura</title>
-      <link>https://danieltak.com.br/tags/estrutura/</link>
+      <link>http://localhost:1313/tags/estrutura/</link>
       <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/estrutura/</guid>
+      <guid>http://localhost:1313/tags/estrutura/</guid>
       <description></description>
     </item>
     <item>
       <title>Struct</title>
-      <link>https://danieltak.com.br/tags/struct/</link>
+      <link>http://localhost:1313/tags/struct/</link>
       <pubDate>Tue, 06 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/struct/</guid>
+      <guid>http://localhost:1313/tags/struct/</guid>
       <description></description>
     </item>
     <item>
       <title>OlaMundo</title>
-      <link>https://danieltak.com.br/tags/olamundo/</link>
+      <link>http://localhost:1313/tags/olamundo/</link>
       <pubDate>Mon, 05 Feb 2024 21:11:32 -0300</pubDate>
-      <guid>https://danieltak.com.br/tags/olamundo/</guid>
+      <guid>http://localhost:1313/tags/olamundo/</guid>
       <description></description>
     </item>
   </channel>
