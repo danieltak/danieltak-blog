@@ -228,13 +228,13 @@ Number Slot 1 is 600
 Number Slot 2 is 700
 ```
 
-####  2.3.1. <a name='Join'></a>Join
+###  Join
 
 Se é novo no multithreading, há algumas partes deste código que podem não fazer sentido. O método [join()][join] é provavelmente uma delas. Um detalhe importante a entender sobre o início de novas threads é que elas trabalham e funcionam totalmente separadas da thread principal, a thread que começa em main() . Como elas são totalmente separadas, temos que decidir um ponto no qual queremos esperar que elas completem o trabalho que lhes foi atribuído.
 
 Pense em [join()][join] de forma semelhante a como duas pessoas podem se separar para fazer suas próprias tarefas separadas, e então "se juntar" novamente mais tarde. Se você estiver viajando ou indo a algum lugar com um amigo, você não quer simplesmente abandoná-lo! O ideal é esperar que ele se junte a nós novamente. A mesma lógica se aplica às threads. Sempre que são criadas threads adicionais, há a obrigação de indicar como se pretende que a thread central e principal atue.
 
-####  2.3.2. <a name='Detach'></a>Detach
+###  Detach
 
 Você sempre precisa usar [join] nas threads? Não. Na verdade, há uma outra opção. Assim como no exemplo dos amigos, é possível que um amigo queira seguir seu próprio caminho de volta para casa e não se encontrar com você. No caso das threads, isso é chamado de [detaching][detach]. Separar um thread significa permitir que ele trabalhe e conclua seu trabalho independentemente da thread principal. Porém, isso pode ser perigoso. Veja o exemplo a seguir, muito semelhante ao de [join()][join] , por exemplo.
 
@@ -281,7 +281,7 @@ O primeiro risco aqui é usar o heap alocado depois de ter sido excluído. Ao co
 
 O segundo risco aqui é que os threads criados podem continuar em execução mesmo após o término do thread principal, se o trabalho deles não for concluído. Ou eles podem ser eliminados assim que o principal terminar. Esse é um comportamento indefinido (undefined behavior) de acordo com o padrão C++. Independentemente do que um compilador específico possa garantir, o comportamento indefinido é algo que deve ser evitado. Há casos de uso válidos para [detach()][detach], mas qualquer um deles exige alguma outra forma de sincronização entre threads para ser confiável.
 
-###  2.4. <a name='ThreadManagement'></a>Thread Management
+##  Thread Management
 
 Cada programa em execução tem pelo menos uma thread que é ocupada por seu ponto de entrada. Pode haver muitas threads em um único programa e a memória é compartilhada entre todos os threads. Os objetos possuídos pelo thread principal (e compartilhados por outros threads como referência a ele) seriam destruídos assim que saíssem do escopo. Isso pode levar ao acesso corrupto à memória pelos demais threads.
 
@@ -293,7 +293,7 @@ A [RAII] é uma boa maneira de garantir que um thread seja unido, escrevendo uma
 
 O C++ tem uma biblioteca robusta para dar suporte ao gerenciamento de threads. Uma instância de thread pode receber qualquer chamável (funções, functors, binds ou funções lambda) e seus parâmetros como argumentos. É importante observar que os parâmetros chamam o construtor de cópia padrão para criar uma cópia do parâmetro em seu escopo. Portanto, para realmente "compartilhar" a memória entre o thread chamador e o thread receptor, os objetos de parâmetro devem ser envolvidos com `std::ref()` ou pela maneira convencional de chamar usando ponteiros. Para transferir a propriedade de um objeto, o objeto pode ser envolvido com `std::move()`, que evoca o construtor move em vez do construtor copy no momento da inicialização.
 
-##  3. <a name='SharedResources'></a>Shared Resources
+##  Shared Resources
 
 Um recurso em que dois threads diferentes podem acessar o mesmo endereço de memória é chamado de recurso compartilhado. É fundamental observar a ênfase no endereço. No exemplo anterior mostrado aqui, com vários threads acessando o mesmo array, esse não é um recurso compartilhado porque nenhum dos dois threads está lendo ou gravando no mesmo endereço de memória. A matriz poderia ter sido apenas quatro ponteiros inteiros separados; não há nada em uma matriz que a torne um recurso compartilhado.
 
@@ -337,7 +337,7 @@ private:
 
 No exemplo acima, os métodos `push()` e `pop()` da classe acontecem enquanto o thread de chamada constrói um bloqueio no mutex associado à fila. Esse bloqueio é melhor usado como um objeto de estilo [RAII], onde está ativo apenas em algum escopo de código. Assim que o programa termina esse escopo, o objeto lock guard é destruído, permitindo que outro thread construa e adquira um bloqueio no mutex. Esse padrão continua a satisfazer a condição de que apenas um thread pode modificar a fila por vez.
 
-###  3.1. <a name='Mutexesarestillpotentiallydangerous'></a>Mutexes ainda são potencialmente perigosos
+###  Mutexes ainda são potencialmente perigosos
 
 Embora pareçam muito legais e diretos, os mutexes ainda podem ser perigosos. Quando um thread adquire um bloqueio em um mutex, ele é responsável por liberar ou destruir esse bloqueio para que outros threads também possam acessar o escopo seguro do código. O que acontece se um thread nunca libera o bloqueio que adquiriu? Bem, algo muito ruim.
 
@@ -345,7 +345,7 @@ Um deadlock ocorre quando um thread bloqueia um mutex, mas esse bloqueio, por al
 
 A regra geral para os mutexes é pensar com cuidado e criticamente sobre o que um thread faz quando coloca um bloqueio em um mutex. É fundamental que um thread só bloqueie quando for absolutamente necessário o acesso de um único thread e, ao fazê-lo, trabalhe o mais rápido possível. Embora os mutexes forneçam um meio de acessar com segurança o mesmo recurso, eles o fazem com um custo de desempenho.
 
-###  3.2. <a name='LockGuard'></a>Lock Guard
+###  Lock Guard
 
 Com o seguinte [código](https://stackoverflow.com/a/35252160/7690982):
 
@@ -414,9 +414,9 @@ Portanto, ao fazer isso manualmente, você precisa ter certeza de que o mutex es
 
 Isso evita ter que fazer unlock em todas as exceções e sempre realizar um try/catch para evitar o dead lock em caso de exceções.
 
-##  4. <a name='Sincronizao'></a>Sincronização 
+##  Sincronização 
 
-###  4.1. <a name='DeadlockvsStarvation'></a>Deadlock vs Starvation
+###  Deadlock vs Starvation
 
 O deadlock ocorre quando cada processo mantém um recurso e espera por outro recurso detido por qualquer outro processo. As condições necessárias para que o deadlock ocorra são Exclusão mútua, Manter e esperar, Sem preempção e Espera circular. Nesse caso, nenhum processo que detenha um recurso e esteja esperando por outro é executado. Por exemplo, no diagrama abaixo, o processo 1 está mantendo o recurso 1 e aguardando o recurso 2, que é adquirido pelo processo 2, e o processo 2 está aguardando o recurso 1. Portanto, tanto o processo 1 quanto o processo 2 estão em deadlock.
 
@@ -434,7 +434,7 @@ Starvation é o problema que ocorre quando os processos de alta prioridade conti
 4.|Também conhecido como espera circular|Também conhecido como trava viva
 5.|Pode ser prevenido evitando-se as condições necessárias para o deadlock|Pode ser evitado pelo Aging
 
-###  4.2. <a name='SeoCrtica'></a>Seção Crítica
+###  Seção Crítica
 
 Na ciência da computação, uma seção crítica (Critical Section) refere-se a um segmento de código que é executado por vários threads concorrentes ou processos simultâneos e que acessa recursos compartilhados. Esses recursos podem incluir memória compartilhada, arquivos ou outros recursos do sistema que só podem ser acessados por um thread ou processo por vez para evitar inconsistência de dados ou condições de corrida.
 
@@ -444,7 +444,7 @@ Na ciência da computação, uma seção crítica (Critical Section) refere-se a
 
 A utilização de seções críticas na sincronização pode ser vantajosa para melhorar o desempenho de sistemas concorrentes, pois permite que múltiplos threads ou processos trabalhem juntos sem interferir uns nos outros. Contudo, deve-se ter cuidado ao projetar e implementar seções críticas, pois a sincronização incorreta pode levar a condições de corrida e deadlocks.
 
-####  4.2.1. <a name='Introduction'></a>Introduction
+####  Introdução
 
 Quando mais de um processo tenta acessar o mesmo segmento de código, esse segmento é conhecido como seção crítica. A seção crítica contém variáveis compartilhadas ou recursos que precisam ser sincronizados para manter a consistência das variáveis de dados.
 
@@ -463,7 +463,7 @@ Duas abordagens gerais são usadas para lidar com seções críticas:
 1. Kernels preemptivos: Um kernel preemptivo permite que um processo seja preemptado enquanto estiver sendo executado no modo kernel.
 2. Kernels não preemptivos: Um kernel não preemptivo não permite que um processo em execução no modo kernel seja preemptado; um processo no modo kernel será executado até que exista no modo kernel, bloqueie ou ceda voluntariamente o controle da CPU. Um kernel não preemptivo é essencialmente livre de condições de corrida nas estruturas de dados do kernel, pois somente um processo está ativo no kernel por vez.
 
-####  4.2.2. <a name='Problema'></a>Problema
+####  Problema
 
 O uso de seções críticas em um programa pode causar vários problemas, inclusive:
 
@@ -480,7 +480,7 @@ Alguns livros de referência que abordam a seção crítica e tópicos relaciona
 4. "The Art of Multiprocessor Programming", de Maurice Herlihy e Nir Shavit.
 5. "Concurrent Programming in Java: Design Principles and Patterns", de Doug Lea.
 
-####  4.2.3. <a name='ExclusoMtua'></a>Exclusão Mútua
+####  Exclusão Mútua
 
 A exclusão mútua é uma propriedade da sincronização de processos que afirma que "não podem existir dois processos na seção crítica em um determinado momento". O termo foi cunhado pela primeira vez por Dijkstra. Qualquer técnica de sincronização de processos que esteja sendo usada deve satisfazer a propriedade de exclusão mútua, sem a qual não seria possível se livrar de uma condição de corrida. 
 
@@ -497,7 +497,7 @@ O requisito da exclusão mútua é que, quando o processo P1 estiver acessando u
 
 Exemplos de tais recursos incluem arquivos, dispositivos de E/S, como impressoras, e estruturas de dados compartilhadas.
 
-####  4.2.4. <a name='Condies'></a>Condições
+####  Condições
 
 De acordo com os quatro critérios seguintes, a exclusão mútua é aplicável:
 
@@ -506,7 +506,7 @@ De acordo com os quatro critérios seguintes, a exclusão mútua é aplicável:
 3. Para acessar a seção crítica, um processo que está fora dela não deve obstruir outro processo.
 4. Sua seção crítica deve ser acessível por múltiplos processos em um período de tempo finito; vários processos nunca devem ficar esperando em um loop infinito.
 
-####  4.2.5. <a name='Abordagensdeimplementao'></a>Abordagens de implementação
+####  Abordagens de implementação
 
 1. Método de software: Deixar a responsabilidade para os próprios processos. Esses métodos costumam ser muito propensos a erros e acarretam altos custos indiretos.
 
@@ -523,7 +523,7 @@ Requisitos:
 5. Um processo não pode impedir que qualquer outro processo entre em uma seção crítica.
 6. Um processo não pode ser adiado indefinidamente para entrar em sua seção crítica.
 
-####  4.2.6. <a name='Quandousar'></a>Quando usar?
+####  Quando usar?
 
 Uma maneira fácil de visualizar o significado da exclusão mútua é imaginar uma lista vinculada de vários itens, com o quarto e o quinto itens que precisam ser removidos. Ao alterar a próxima referência do nó anterior para apontar para o nó seguinte, o nó que fica entre os outros dois nós é excluído.
 
@@ -553,7 +553,7 @@ O vestiário nada mais é do que a seção crítica, o menino A e a menina B sã
 
 Fonte: GeeksForGeeks
 
-###  4.3. <a name='ProgressodeumProcesso'></a>Progresso de um Processo
+###  Progresso de um Processo
 
 A exclusão mútua, por si só, não pode garantir a execução simultânea de processos sem problemas - uma segunda condição conhecida como progresso é necessária para garantir que não ocorra nenhum deadlock durante essa execução.
 
@@ -581,7 +581,7 @@ De acordo com a definição principal de progresso, os únicos processos que pod
 
 A principal função do progresso é garantir que um processo esteja sendo executado na seção crítica em qualquer momento (de modo que algum trabalho esteja sempre sendo feito pelo processador). Essa decisão não pode ser "adiada indefinidamente" - em outras palavras, deve levar um tempo limitado para selecionar qual processo deve ter permissão para entrar na seção crítica. Se essa decisão não puder ser tomada em um tempo finito, isso levará a um deadlock.
 
-###  4.4. <a name='Problemasdesincronizaodethread'></a>Problemas de sincronização de thread
+### Problemas de sincronização de thread
 
 ```cpp
 #include <pthread.h> 
@@ -648,7 +648,7 @@ Observando atentamente e visualizando a execução do código, podemos ver que :
 - O problema real era o uso da variável 'counter' por um segundo thread quando o primeiro thread estava usando ou prestes a usá-la.
 - Em outras palavras, podemos dizer que a falta de sincronização entre os threads durante o uso do recurso compartilhado "counter" causou os problemas ou, em uma palavra, podemos dizer que esse problema ocorreu devido a um "problema de sincronização" entre dois threads.
 
-###  4.5. <a name='Mutex'></a>Mutex
+###  Mutex
 
 - Um Mutex é um bloqueio que definimos antes de usar um recurso compartilhado e liberamos depois de usá-lo.
 - Quando o bloqueio é definido, nenhum outro thread pode acessar a região bloqueada do código.
@@ -737,9 +737,9 @@ Resultado:
 
 Portanto, desta vez, os registros de início e término de ambos os trabalhos estão presentes. Portanto, a sincronização de thread ocorreu com o uso do Mutex.
 
-###  4.6. <a name='MutexvsSemaphore'></a>Mutex vs Semaphore
+###  Mutex vs Semaphore
 
-####  4.6.1. <a name='Mutex-1'></a>Mutex
+####  Mutex
 
 Mutex é um tipo específico de semáforo binário usado para fornecer um mecanismo de bloqueio. Significa Objeto de Exclusão Mútua. O Mutex é usado principalmente para fornecer exclusão mútua a uma parte específica do código, de modo que o processo possa executar e trabalhar com uma seção específica do código em um determinado momento. 
 
@@ -751,7 +751,7 @@ O Mutex usa um mecanismo de herança de prioridade para evitar problemas de inve
 - Quando o thread anterior deixa a seção crítica, depois disso somente outros processos podem entrar nela, não há outro mecanismo para bloquear ou desbloquear a seção crítica.
 - A implementação do mutex pode levar a uma espera prolongada que leva ao desperdício do ciclo da CPU.
 
-####  4.6.2. <a name='Semforo'></a>Semáforo
+####  Semáforo
 
 Um semáforo é uma variável de número inteiro não negativo que é compartilhada entre vários threads. O semáforo funciona com base no mecanismo de sinalização, no qual um thread pode ser sinalizado por outro thread. O semáforo usa duas operações atômicas para sincronização de processos:
 
@@ -787,7 +787,7 @@ Mutex não possui subtipos.|O semáforo é de dois tipos:
 Um mutex só pode ser modificado pelo processo que está solicitando ou liberando um recurso.|O semáforo funciona com duas operações atômicas (Espera, Sinal) que podem modificá-lo.
 Se o mutex estiver bloqueado, o processo precisará aguardar na fila de processos e o mutex só poderá ser acessado quando o bloqueio for liberado.|Se o processo precisar de um recurso e nenhum recurso estiver livre. Assim, o processo precisa realizar uma operação de espera até que o valor do semáforo seja maior que zero.
 
-##  5. <a name='AtomicOperation'></a>Atomic Operation
+##  Atomic Operation
 
 Quando uma operação atômica é executada em um objeto por um thread específico, nenhum outro thread pode ler ou modificar o objeto enquanto a operação atômica estiver em andamento. Isso significa que outros threads só verão o objeto antes ou depois da operação - nenhum estado intermediário.
 
@@ -942,7 +942,7 @@ Voltando ao nível inferior:
 
 Fonte: Medium
 
-##  6. <a name='EstudosFuturos'></a>Estudos Futuros
+##  Estudos Futuros
 
 - Concurrency Memory Models
 - Memory Barriers
@@ -951,7 +951,7 @@ Fonte: Medium
 - Coroutines
 - Non-blocking algorithm (Lock-free)
 
-###  6.1. <a name='ThreadSanitizer'></a>Thread Sanitizer
+###  Thread Sanitizer
 
 O Thread Sanitizer, ou TSan, é uma ferramenta que nos permite depurar corridas de dados quando vários threads tentam acessar a mesma área de memória de forma não atômica e com pelo menos uma operação de gravação em um desses threads.
 
