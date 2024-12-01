@@ -71,7 +71,7 @@ A boa notícia é que os processadores continuarão a se tornar mais poderosos. 
 
 Por volta do início de 2003, você notará uma preocupante mudança brusca na tendência anterior de velocidades de clock da CPU cada vez mais rápidas. Adicionei linhas para mostrar as tendências de limite na velocidade máxima do clock; em vez de continuar no caminho anterior, conforme indicado pela linha pontilhada fina, há um achatamento acentuado. Tem se tornado cada vez mais difícil explorar velocidades de clock mais altas devido a não apenas um, mas vários problemas físicos, principalmente o calor (muito grande e difícil de dissipar), o consumo de energia (muito alto) e problemas de vazamento de corrente.
 
-![ClockSpeedEvolution](/posts/images/threads/CPU.jpg)
+![ClockSpeedEvolution](/posts/images/threads/CPU.png)
 
 Fonte: http://www.gotw.ca/images/CPU.png
 

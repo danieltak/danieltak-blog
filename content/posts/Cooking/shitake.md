@@ -45,13 +45,13 @@ editPost:
 - 1 sachê de Hondashi
 - Manteiga
 - Saquê Mirin (culinário)
-- Ólero de gergelim
+- Óleo de gergelim
 
 ## Modo de preparo
 
 1. Limpar os cogumelos com papel toalha;
 2. Cortar os cogumelos em fatias finas;
 3. Colocar na panela um pouco de manteiga e depois os cogumelos;
-4. Adicionar o Hondashi (se tiver pouco cogumelos, colocar 1/2 saquinho);
+4. Adicionar o Hondashi (se tiver poucos cogumelos, colocar 1/2 saquinho);
 5. Adicionar meia xícara de Saquê Mirin;
 6. Desligue o fogo e adicione Óleo de Gergelim.
