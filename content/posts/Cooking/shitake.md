@@ -1,5 +1,5 @@
 ---
-title: "Shitake"
+title: "Receita Shitake"
 date: '2024-11-30T23:36:32-03:00'
 # weight: 1
 # aliases: ["/first"]
@@ -54,4 +54,4 @@ editPost:
 3. Colocar na panela um pouco de manteiga e depois os cogumelos;
 4. Adicionar o Hondashi (se tiver poucos cogumelos, colocar 1/2 saquinho);
 5. Adicionar meia xícara de Saquê Mirin;
-6. Desligue o fogo e adicione Óleo de Gergelim.
+6. Após poucos minutos, desligue o fogo e adicione óleo de gergelim.

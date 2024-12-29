@@ -146,7 +146,7 @@ if( iStatus != 0 )
 }
 ```
 
-Or to use `sigqueue()`:
+Ou para usar o `sigqueue()`:
 
 ```cpp	
 pid_t m_iProcID = your_proc_id_here;
