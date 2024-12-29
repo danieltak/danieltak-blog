@@ -104,6 +104,8 @@ O DIO é uma solução indispensável para qualquer rede de fibra óptica que ne
 
 ![DIO](/posts/images/fibra-optica/DIO.png)
 
+Fonte: Furukawa
+
 As fibras devem estar identificadas conforme o projeto, o DIO de cada rack deve estar corretamente identificado, para conectar o mesmo par em cada lado do cabo. Imagina instalar centenas de pares de fibra com comprimentos de muitos quilômetros e não identificar ou organizar? Depois ficaria quase impossível instalar os equipamentos, realizar a manutenção ou expansão da rede.
 
 ## GBIC ou SFP
