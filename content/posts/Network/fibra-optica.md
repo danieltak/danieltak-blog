@@ -25,7 +25,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: #images/fibra-optica/green-fiber.png # image path/url
+    image: images/fibra-optica/green-fiber.png # image path/url
     alt: "AI Generated" # alt text
     caption: "fonte: AI generated" # display caption under cover
     relative: false # when using page bundles set this to true
