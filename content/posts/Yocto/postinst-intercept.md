@@ -42,7 +42,7 @@ editPost:
 
 Ao gerar o yocto manualmente, não tinha problemas.
 
-Porém, após criar uma pipeline para gerar imagens no processo de desenvolvimento, o seguinte erro apareceu:
+Porém, após criar uma pipeline para gerar imagens de forma automatizada durante o processo de desenvolvimento, o seguinte erro apareceu:
 
 > update_desktop_database: 7: update-desktop-database: not found
 
