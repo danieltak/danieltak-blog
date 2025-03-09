@@ -40,24 +40,23 @@ editPost:
 
 ## Ingredientes
 
-- 3 dentes de alho
-- 3 tomates pequenos
-- 2 colheres de chá de Aji-no-Moto (MSG - glutamato monossódico)
-- 3 colheres de chá de sal
-- 1 cebola
-- 1 colher de orégano
-- 1 copo de óleo
-- 1 copo e meio de vinagre
-- 1/2 copo de ketchup
-- 2 folhas de louro
-- 1 colher cheia de sopa de pimenta dedo-de-moça
-- 1 colher rasa de páprica
-- 1/2 colher rasa de karê
+- 3 dentes de alho;
+- 3 tomates pequenos;
+- 2 colheres de chá de Aji-no-Moto (MSG - glutamato monossódico);
+- 3 colheres de chá de sal;
+- 1 cebola;
+- 1 colher de orégano;
+- 1 copo de óleo;
+- 1 copo e meio de vinagre;
+- 1/2 copo de ketchup;
+- 2 folhas de louro;
+- 1 colher cheia de sopa de pimenta dedo-de-moça;
+- 1 colher rasa de páprica;
+- 1/2 colher rasa de karê;
 
 ## Modo de preparo
 
-1. Descascar os dentes de alho
-2. Picar em cubos as cebolas e os tomates
-3. Bate tudo no liquidificador, be happy
-
+1. Descasque os dentes de alho.
+2. Pique em cubos as cebolas e os tomates.
+3. Bata tudo no liquidificador até ficar homogêneo. E estará pronto.
 

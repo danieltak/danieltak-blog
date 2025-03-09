@@ -38,24 +38,24 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-## Por quê?
+## Relevância
 
 O arroz é o principal ingrediente para preparar um sushi, sem o tempero correto ou tipo de arroz correto, o sushi pode perder o sabor ou até mesmo não "dar certo", por não ficar grudadinho para enrolar.
 
 ## Ingredientes
 
-- 6 copos de arroz
-- 10 copos de água
-- 10 colheres de sopa de açúcar, um pouco mais do que colher rasa
-- 1 colher de sopa de sal
-- 1 colher de sopa rasa de Aji-no-Moto (MSG - glutamato monossódico)
-- 3/4 xícara de chá de vinagre de arroz (tozan)
-- 3 colheres sopa de saquê
+- 6 copos de arroz;
+- 10 copos de água;
+- 10 colheres de sopa de açúcar, um pouco mais do que colher rasa;
+- 1 colher de sopa de sal;
+- 1 colher de sopa rasa de Aji-no-Moto (MSG - glutamato monossódico);
+- 3/4 xícara de chá de vinagre de arroz (tozan);
+- 3 colheres sopa de saquê;
 
 > O arroz deve ser do tipo japonês com **grão curto**.
 
 ## Modo de preparo
 
-1. Colocar o arroz e a água na panela elétrica para cozinhar
-2. Misturar os outros temperos num recipiente e esquentar um pouco no fogo ou no microondas
-3. Depois que o arroz estiver pronto, misturar o tempero com o arroz
+1. Coloque o arroz e a água na panela elétrica para cozinhar.
+2. Misture os outros temperos num recipiente e esquente um pouco no fogo ou no microondas.
+3. Depois que o arroz estiver pronto, misture o tempero com o arroz. 

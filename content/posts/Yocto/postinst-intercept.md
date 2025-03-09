@@ -40,9 +40,7 @@ editPost:
 
 ## Introdução
 
-Ao gerar o yocto manualmente, não tinha problemas.
-
-Porém, após criar uma pipeline para gerar imagens de forma automatizada durante o processo de desenvolvimento, o seguinte erro apareceu:
+Quando fui gerar o yocto manualmente, tudo parecia certo. Contudo, após criar uma pipeline para gerar imagens de forma automatizada durante o processo de desenvolvimento, o seguinte erro apareceu:
 
 > update_desktop_database: 7: update-desktop-database: not found
 
@@ -50,7 +48,7 @@ Ou
 
 > update_desktop_database: 7: update-desktop-database: command not found
 
-A solução mais fácil é comentar os scripts de verificação, mas após algum tempo fui pesquisar mais a fundo e segue a resposta para este erro.
+A solução mais fácil é comentar os scripts de verificação, mas após algum tempo fui pesquisar mais a fundo e segue a solução para este erro.
 
 ## Solução
 
@@ -66,7 +64,7 @@ Um passo para verificar e instalar o pacote [extra/desktop-file-utils] foi adici
 
 Após instalar o pacote, o problema persistiu...
 
-O problema é a permissão dos arquivos de post install. Na pipeline de ci-cd, após clonar o repositório com os arquivos para gerar a imagem yocto, a permissão e o dono de todos os arquivos era alterada. Permissão `755` e dono `gitlab-runner`.
+O problema era a permissão dos arquivos de post install. Na pipeline de ci-cd, após clonar o repositório com os arquivos para gerar a imagem yocto, a permissão e o dono de todos os arquivos era alterada para permissão `755` e dono `gitlab-runner`.
 
 Verifique as permissões dos arquivos do diretório `poky/scripts/postinst-intercepts`.
 

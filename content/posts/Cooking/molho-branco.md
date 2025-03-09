@@ -40,25 +40,25 @@ editPost:
 
 ## Ingredientes
 
-- Manteiga
-- Farinha de trigo
-- Leite
-- Caldo de Galinha
-- Requeijão
-- Queijo (Gorgonzola ou outro)
-- Noz-moscada
+- Manteiga;
+- Farinha de trigo;
+- Leite;
+- Caldo de Galinha;
+- Requeijão;
+- Queijo (Gorgonzola ou outro);
+- Noz-moscada;
 
-> Qualquer queijo pode ser utilizado na receita, utilize geralmente o de sua preferência, na minha é o blue cheese.
+> Qualquer queijo pode ser utilizado na receita. Utilize o de sua preferência, a minha é o blue cheese.
 
 ## Modo de preparo
 
-1. Colocar 2 colheres de manteiga na panela e esperar derreter em fogo médio
-2. Colocar uma colher de farinha de trigo e mexer bem, para não "empelotar"
-3. Colocar leite e caldo de galinha
+1. Coloque 2 colheres de manteiga na panela e espere derreter em fogo médio.
+2. Coloque uma colher de farinha de trigo e mexa bem para não "empelotar".
+3. Coloque o leite e o caldo de galinha.
 
 > Mexendo sempre!
 
-4. Colocar meio pote requeijão e os queijos
-5. Mexa e verifique a consistência, se estiver muito líquido, adicione mais farinha de trigo
-6. Assim que estiver com uma consistência de molho, desligar o fogo
-7. Ralar noz-moscada e está pronto para servir!
+4. Coloque meio pote de requeijão e os queijos a gosto.
+5. Mexa e verifique a consistência. Se estiver muito líquido, adicione mais farinha de trigo.
+6. Assim que estiver com uma consistência de molho, desligue o fogo.
+7. Rale noz-moscada e estará pronto para servir!

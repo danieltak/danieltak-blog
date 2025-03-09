@@ -40,12 +40,12 @@ editPost:
 
 ## Ingredientes
 
-- 100 ml de shoyu
-- 100 ml de saquê
-- 100 g de açúcar
-- Kombu (alga)
-- Katsuobushi
+- 100 ml de shoyu;
+- 100 ml de saquê;
+- 100 g de açúcar;
+- Kombu (alga);
+- Katsuobushi;
 
 ## Modo de preparo
 
-1. Reduzir por 30 minutos
+1. Reduza por 30 minutos.
