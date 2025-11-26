@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Como manipular o tempo com o header em C time.h no Linux"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

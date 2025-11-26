@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Logs de Erros"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

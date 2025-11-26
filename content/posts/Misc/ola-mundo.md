@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Primeiro post do Blog."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

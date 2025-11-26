@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "XIconifyWindow() e XMapWindow()"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

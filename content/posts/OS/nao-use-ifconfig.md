@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Use o comando do Linux `ip` ao invés do antigo `ifconfig`"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

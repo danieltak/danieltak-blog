@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Molho branco para macarrão e outras massas"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false

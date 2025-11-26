@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Word Wrap no Table Widget do Qt"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Prato japonês de ensopado de carne com curry"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false

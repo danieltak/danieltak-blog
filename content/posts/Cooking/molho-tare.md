@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Molho japonês para usar em grelhados e frituras"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Molho de pimenta usado nas lanchonetes e pastelarias"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

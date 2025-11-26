@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Prato japonês simples e gostoso como acompanhamento"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

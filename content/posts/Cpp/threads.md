@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Introdução ao assunto de multithreading."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

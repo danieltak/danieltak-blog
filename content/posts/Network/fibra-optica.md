@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Dicas para um projeto de Fibra Óptica (ou Ótica)."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

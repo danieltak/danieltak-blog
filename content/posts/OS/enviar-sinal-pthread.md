@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Como enviar sinais para uma thread ou processo no POSIX"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Fundamentos Básicos para a Visão Computacional na Indústria."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

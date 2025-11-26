@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "postinstall intercept hook 'update_desktop_database' error"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

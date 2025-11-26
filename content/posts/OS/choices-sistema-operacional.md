@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Alguns argumentos sobre cada sistema operacional e a razão de eu escolher este sistema."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Distâncias entre dois pontos de uma esfera a partir de suas latitudes e longitudes."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

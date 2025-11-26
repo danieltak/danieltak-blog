@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "O principal ingrediente para preparar um sushi"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

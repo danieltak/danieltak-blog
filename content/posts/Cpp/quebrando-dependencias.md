@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Vídeo de Klaus Iglberger."
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false

@@ -13,7 +13,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Tempo no C++ com a biblioteca STL std::chrono"
-disableHLJS: true # to disable highlightjs
+
 disableShare: false
 disableHLJS: false
 hideSummary: false
